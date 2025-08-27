@@ -6,11 +6,22 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "baseUrl": "./src",
+    "paths": {
+      "src": ["./src/*"],
+      "modules": ["./src/modules/*"],
+      "components": ["./src/components/*"],
+      "assets": ["./src/assets/*"],
+      "styles": ["./src/styles/*"],
+      "helpers": ["./src/helpers/*"],
+      "utils": ["./src/utils/*"],
+      "storeRedux": ["src/storeRedux/*"]
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false,
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
