@@ -11,7 +11,7 @@ const FooterInfo = () => {
     <div className={styles.footerInfo}>
       <Social />
       <div>
-        <h2>Nuvion </h2>
+        <h3>Nuvion </h3>
         {links.map(({ label }) => (
           <p>{t(`footer.${label}`)}</p>
         ))}

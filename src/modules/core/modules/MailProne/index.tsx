@@ -1,18 +1,21 @@
 import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 import PhoneCall from 'assets/svg/PhoneCall';
-import styles from './index.module.scss';
 import Mail from 'assets/svg/Mail';
+import styles from './index.module.scss';
 
 interface MailProneProps {
   mail?: boolean;
 }
 
 const MailProne: FC<MailProneProps> = ({ mail }) => {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.contact}>
       {mail ? (
         <div>
-          <h3>Або надішліть електронного листа</h3>
+          <h3>{t('footer.orSendEmail')}</h3>
           <div>
             <Mail />
             <span>info@nuvion.nl</span>
@@ -20,7 +23,7 @@ const MailProne: FC<MailProneProps> = ({ mail }) => {
         </div>
       ) : (
         <div>
-          <h3>Зателефонуйте нам</h3>
+          <h3>{t('footer.callUs')}</h3>
           <div>
             <PhoneCall />
             <span>020 - 634 36 38</span>
