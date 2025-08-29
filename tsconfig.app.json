@@ -15,7 +15,8 @@
       "styles": ["./src/styles/*"],
       "helpers": ["./src/helpers/*"],
       "utils": ["./src/utils/*"],
-      "storeRedux": ["src/storeRedux/*"]
+      "storeRedux": ["src/storeRedux/*"],
+      "pages": ["src/pages/*"]
     },
 
     /* Bundler mode */
@@ -34,5 +35,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "src/main.tsx"]
 }

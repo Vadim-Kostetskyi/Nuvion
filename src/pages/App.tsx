@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
-import 'styles/index.css'
+import 'styles/index.scss'
 
 const App = () => (
   <>
