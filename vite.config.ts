@@ -16,6 +16,7 @@ export default defineConfig({
       utils: path.resolve(__dirname, 'src/utils'),
       storeRedux: path.resolve(__dirname, 'src/storeRedux'),
       pages: path.resolve(__dirname, 'src/pages'),
+      products: path.resolve(__dirname, 'src/products'),
       'swiper/css': 'swiper/swiper.min.css',
     },
   },

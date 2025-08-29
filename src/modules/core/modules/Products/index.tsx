@@ -1,10 +1,16 @@
+import { products } from 'products';
 import styles from './index.module.scss';
+import ProductCardSmall from 'modules/core/components/ProductCardSmall';
 
 const Products = () => {
   return (
     <div className={styles.productsWrapper}>
       <div className={styles.products}>
-        sdfsdfsdf sdf sdfs sdf sdf sdfs df sdf sdf
+        <div>
+          {products.map((props) => (
+            <ProductCardSmall {...props} />
+          ))}
+        </div>
       </div>
     </div>
   );

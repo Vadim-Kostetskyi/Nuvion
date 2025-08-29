@@ -1,4 +1,4 @@
-@use "styles/bootstrap" as *;
+@use 'styles/bootstrap' as *;
 
 .main {
   position: relative;
@@ -8,6 +8,7 @@
   width: calc(100% - 40px);
   max-width: $max-content-width;
   margin-bottom: auto;
+  padding-top: 70px;
 
   @include media(laptopMedium) {
     width: calc(100% - 15rem);

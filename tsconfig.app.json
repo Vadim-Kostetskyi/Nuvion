@@ -8,7 +8,6 @@
     "skipLibCheck": true,
     "baseUrl": "./src",
     "paths": {
-      "src": ["./src/*"],
       "modules": ["./src/modules/*"],
       "components": ["./src/components/*"],
       "assets": ["./src/assets/*"],
@@ -16,7 +15,8 @@
       "helpers": ["./src/helpers/*"],
       "utils": ["./src/utils/*"],
       "storeRedux": ["src/storeRedux/*"],
-      "pages": ["src/pages/*"]
+      "pages": ["src/pages/*"],
+      "products": ["products.ts"]
     },
 
     /* Bundler mode */

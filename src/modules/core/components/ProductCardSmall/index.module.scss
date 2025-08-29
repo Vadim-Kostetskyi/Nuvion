@@ -1,0 +1,14 @@
+@use 'styles/bootstrap' as *;
+
+.productCardSmall {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  width: 600px;
+  overflow: hidden;
+  background-color: white;
+
+  & img {
+    width: 330px;
+  }
+}
