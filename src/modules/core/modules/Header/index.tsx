@@ -1,11 +1,10 @@
 import LanguageSelector from 'modules/core/components/LanguageSelector';
+import HeaderLogo from 'modules/core/components/HeaderLogo';
 import styles from './index.module.scss';
-import Logo from 'assets/svg/Logo';
 
 const Header = () => (
   <header className={styles.header}>
-    <Logo />
-
+    <HeaderLogo />
     <LanguageSelector />
   </header>
 );

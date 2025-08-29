@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation } from 'react-router-dom';
 import DropDown from '../DropDown';
+import styles from './index.module.scss';
 
 const LanguageSelector = () => {
   const { i18n } = useTranslation();
@@ -8,12 +9,13 @@ const LanguageSelector = () => {
   const location = useLocation();
 
   const handleChange = (lang: string) => {
-    i18n.changeLanguage(lang);
+    const language = lang.toLocaleLowerCase();
+    i18n.changeLanguage(language);
 
-    if (lang === 'en') {
+    if (language === 'en') {
       navigate('/', { replace: true });
     } else {
-      navigate(`/${lang}`, { replace: true });
+      navigate(`/${language}`, { replace: true });
     }
   };
 
@@ -26,8 +28,9 @@ const LanguageSelector = () => {
   return (
     <DropDown
       title={currentLang}
-      list={['en', 'ua', 'nl']}
+      list={['EN', 'UA', 'NL']}
       onChange={handleChange}
+      style={styles.dropDown}
     />
   );
 };

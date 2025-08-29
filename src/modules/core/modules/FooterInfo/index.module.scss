@@ -1,0 +1,6 @@
+@use 'styles/bootstrap' as *;
+
+.footerInfo {
+  display: flex;
+  justify-content: space-around;
+}

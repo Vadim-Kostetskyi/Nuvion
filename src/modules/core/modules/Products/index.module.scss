@@ -1,0 +1,11 @@
+@use 'styles/bootstrap' as *;
+
+.productsWrapper {
+  width: 100vw;
+  background-color: rgb(248, 245, 240);
+}
+
+.products {
+  width: $max-content-width;
+  margin: auto;
+}

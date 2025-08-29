@@ -1,0 +1,8 @@
+@use 'styles/bootstrap' as *;
+
+.social {
+  & img {
+    width: 30px;
+    margin-right: 15px;
+  }
+}

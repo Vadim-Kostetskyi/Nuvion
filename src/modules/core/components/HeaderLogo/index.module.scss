@@ -1,0 +1,16 @@
+@use 'styles/bootstrap' as *;
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  & svg {
+    margin-right: 10px;
+    width: 36px;
+  }
+
+  & p {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}

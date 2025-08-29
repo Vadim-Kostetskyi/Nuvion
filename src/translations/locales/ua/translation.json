@@ -4,6 +4,8 @@
     "constructionRenovation": "Будівництво • Реконструкція • BRRR",
     "quality": "Будуємо та оновлюємо житло і комерційні приміщення. Casco або turn‑key. Чітка SOW, графік і контроль вартості."
   },
-
-  "brand": "Nuvion B.V."
+  "footer": {
+    "contacts": "Контакти",
+    "ourTeam": "Наша команда"
+  }
 }
