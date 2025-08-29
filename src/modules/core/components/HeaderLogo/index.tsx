@@ -1,11 +1,12 @@
-import Logo from 'assets/svg/Logo';
+import logo from 'assets/logo.jpg';
 import { brand } from 'utils/constants';
 import styles from './index.module.scss';
 
 const HeaderLogo = () => {
   return (
     <div className={styles.logo}>
-      <Logo />
+      {/* <Logo /> */}
+      <img src={logo} alt="" />
       <p>{brand}</p>
     </div>
   );
