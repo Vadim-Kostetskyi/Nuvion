@@ -11,4 +11,25 @@
   & img {
     width: 330px;
   }
+
+  & p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  & > div {
+    padding: 20px;
+    & *:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.line {
+  width: 30px;
+  height: 2px;
+  background-color: #42bfff;
 }

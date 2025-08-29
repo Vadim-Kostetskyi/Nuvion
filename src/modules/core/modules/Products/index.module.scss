@@ -9,7 +9,7 @@
   width: $max-content-width;
   margin: auto;
 
-  & div {
+  & > div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;

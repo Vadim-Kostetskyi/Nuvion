@@ -4,8 +4,10 @@ import styles from './index.module.scss';
 
 const Header = () => (
   <header className={styles.header}>
-    <HeaderLogo />
-    <LanguageSelector />
+    <div>
+      <HeaderLogo />
+      <LanguageSelector />
+    </div>
   </header>
 );
 

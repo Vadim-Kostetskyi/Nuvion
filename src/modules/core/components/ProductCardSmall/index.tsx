@@ -14,13 +14,17 @@ const ProductCardSmall: FC<ProductCardSmall> = ({
   image,
   title,
   date,
-  workPerformed,
-  address,
   description,
 }) => {
   return (
     <div className={styles.productCardSmall}>
       <img src={image} alt="" />
+      <div>
+        <h3>{title}</h3>
+        <p>{date}</p>
+        <div className={styles.line}></div>
+        <p>{description}</p>
+      </div>
     </div>
   );
 };

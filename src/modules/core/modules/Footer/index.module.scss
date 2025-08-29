@@ -1,11 +1,5 @@
 @use 'styles/bootstrap' as *;
 
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: $max-content-width;
-  height: 70px;
-  background-color: $pageBackground;
+.footer {
+  padding: 25px 0 0;
 }
