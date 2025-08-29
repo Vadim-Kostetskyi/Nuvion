@@ -1,23 +1,21 @@
-import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import HomePage from './HomePage';
-import 'styles/index.scss'
+import 'styles/index.scss';
 
 const App = () => (
-  <>
-    {/* <ScrollToTop /> */}
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      {/* <Route
-        path="/dashboard"
-        element={
-          <PrivateRoute>
-            <ProductFormPage />
-          </PrivateRoute>
-        }
-      /> */}
-    </Routes>
-  </>
+  <Routes>
+    {/* дефолтна мова (англійська) */}
+    <Route path="/" element={<HomePage />} />
+
+    {/* українська */}
+    <Route path="/ua/*" element={<HomePage />} />
+
+    {/* шведська */}
+    <Route path="/nl/*" element={<HomePage />} />
+
+    {/* 404 → редірект */}
+    <Route path="*" element={<Navigate to="/" replace />} />
+  </Routes>
 );
 
-export default App
+export default App;

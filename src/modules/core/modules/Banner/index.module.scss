@@ -1,0 +1,28 @@
+@use 'styles/bootstrap' as *;
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 100vw;
+  background: radial-gradient(1200px 400px at 20% -10%, #1e293b, transparent),
+    linear-gradient(180deg, #0a0f1f, #0f172a);
+
+  & > div {
+    margin: auto;
+    text-align: center;
+
+    & > *:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  & h1 {
+    color: white;
+  }
+
+  & p {
+    color: rgb(100, 116, 139);
+  }
+}

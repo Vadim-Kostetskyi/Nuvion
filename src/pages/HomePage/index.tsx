@@ -1,9 +1,12 @@
-import MainLayout from "modules/core/components/MainLayout"
+import MainLayout from 'modules/core/components/MainLayout';
+import Banner from 'modules/core/modules/Banner';
 
 const HomePage = () => {
-  return <MainLayout>
-    sdfsdf
-  </MainLayout>
-}
+  return (
+    <MainLayout>
+      <Banner />
+    </MainLayout>
+  );
+};
 
-export default HomePage
+export default HomePage;
