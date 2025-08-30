@@ -1,16 +1,16 @@
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import styles from './index.module.scss';
 
 const Banner = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <section className={styles.banner}>
-      <div>
+      {/* <div>
         <p>{t('banner.constructionRenovation')}</p>
         <h1>{t('banner.slogan')}</h1>
         <p>{t('banner.quality')}</p>
-      </div>
+      </div> */}
     </section>
   );
 };

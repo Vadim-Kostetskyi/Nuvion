@@ -6,12 +6,17 @@
   justify-content: center;
   height: 500px;
   width: 100vw;
-  background: radial-gradient(
-      1200px 400px at 20% -10%,
-      $charcoalBlue,
-      transparent
-    ),
-    linear-gradient(180deg, $deepSpace, $darkSlate);
+  // background: radial-gradient(
+  //     1200px 400px at 20% -10%,
+  //     $charcoalBlue,
+  //     transparent
+  //   ),
+  //   linear-gradient(180deg, $deepSpace, $darkSlate);
+  background-image: url('assets/banner3.png');
+
+  background-repeat: no-repeat; /* щоб не повторювався */
+  background-size: cover; /* щоб заповнив блок */
+  background-position: center;
 
   & > div {
     margin: auto;
