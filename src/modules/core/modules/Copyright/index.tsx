@@ -1,10 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import styles from './index.module.scss';
 
 const Copyright = () => {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.copyright}>
-      Copyright Witte Bouw 2025 © Privacy statement | Algemene Voorwaarden |
-      Beoordeling door klanten: 4,5/ 5 16 beoordelingen
+      {t('copyright')} {t('Privacy')}
     </div>
   );
 };

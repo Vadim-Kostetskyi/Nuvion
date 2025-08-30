@@ -6,7 +6,7 @@
   height: 300px;
   width: 600px;
   overflow: hidden;
-  background-color: white;
+  background-color: $whiteColor;
 
   & img {
     width: 330px;
@@ -31,5 +31,5 @@
 .line {
   width: 30px;
   height: 2px;
-  background-color: #42bfff;
+  background-color: $skyBlue;
 }

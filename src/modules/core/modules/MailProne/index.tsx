@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import PhoneCall from 'assets/svg/PhoneCall';
 import Mail from 'assets/svg/Mail';
+import { email, phoneNumber } from 'utils/constants';
 import styles from './index.module.scss';
 
 interface MailProneProps {
@@ -18,7 +19,7 @@ const MailProne: FC<MailProneProps> = ({ mail }) => {
           <h3>{t('footer.orSendEmail')}</h3>
           <div>
             <Mail />
-            <span>info@nuvion.nl</span>
+            <span>{email}</span>
           </div>
         </div>
       ) : (
@@ -26,7 +27,7 @@ const MailProne: FC<MailProneProps> = ({ mail }) => {
           <h3>{t('footer.callUs')}</h3>
           <div>
             <PhoneCall />
-            <span>020 - 634 36 38</span>
+            <span>{phoneNumber}</span>
           </div>
         </div>
       )}

@@ -7,7 +7,7 @@
   height: 70px;
   background-color: $pageBackground;
   z-index: 100000;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 10px $textSecondary;
 
   & > div {
     display: flex;

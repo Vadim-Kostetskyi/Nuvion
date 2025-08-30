@@ -6,8 +6,12 @@
   justify-content: center;
   height: 500px;
   width: 100vw;
-  background: radial-gradient(1200px 400px at 20% -10%, #1e293b, transparent),
-    linear-gradient(180deg, #0a0f1f, #0f172a);
+  background: radial-gradient(
+      1200px 400px at 20% -10%,
+      $charcoalBlue,
+      transparent
+    ),
+    linear-gradient(180deg, $deepSpace, $darkSlate);
 
   & > div {
     margin: auto;
@@ -19,10 +23,10 @@
   }
 
   & h1 {
-    color: white;
+    color: $whiteColor;
   }
 
   & p {
-    color: rgb(100, 116, 139);
+    color: $slateGray;
   }
 }
