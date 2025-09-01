@@ -1,0 +1,59 @@
+@use 'styles/bootstrap' as *;
+
+.representation {
+  width: 100vw;
+  background-color: $ivory;
+  padding: 80px 0;
+
+  & > div {
+    display: flex;
+    gap: 15px;
+    width: $max-content-width;
+    margin: auto;
+
+    & > div {
+      width: calc((100% / 3) - 15px);
+    }
+  }
+
+  & h2 {
+    font-size: 32px;
+    font-weight: 800;
+  }
+
+  & strong,
+  & p {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  & a {
+    display: inline-block;
+    background-color: $skyBlue;
+    padding: 15px 25px;
+    border-radius: 30px;
+    margin-top: 25px;
+
+    & span {
+      font-size: 18px;
+      font-weight: 800;
+      color: $whiteColor;
+    }
+  }
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  height: 600px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 50px;
+
+  & img {
+    height: 100%;
+  }
+}
