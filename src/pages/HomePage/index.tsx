@@ -1,5 +1,6 @@
 import MainLayout from 'modules/core/components/MainLayout';
 import Banner from 'modules/core/modules/Banner';
+import ContactInformation from 'modules/core/modules/ContactInformation';
 import LatestProjects from 'modules/core/modules/LatestProjects';
 import Prescription from 'modules/core/modules/Prescription';
 import ProposedWorks from 'modules/core/modules/ProposedWorks';
@@ -13,6 +14,7 @@ const HomePage = () => {
       <Representation />
       <Prescription />
       <LatestProjects />
+      <ContactInformation />
     </MainLayout>
   );
 };
