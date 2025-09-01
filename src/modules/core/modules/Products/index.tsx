@@ -1,6 +1,6 @@
 import { products } from 'products';
-import styles from './index.module.scss';
 import ProductCardSmall from 'modules/core/components/ProductCardSmall';
+import styles from './index.module.scss';
 
 const Products = () => {
   return (

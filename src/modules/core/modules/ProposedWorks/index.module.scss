@@ -1,0 +1,63 @@
+@use 'styles/bootstrap' as *;
+
+.proposedWorks {
+  display: flex;
+  padding-bottom: 80px;
+}
+
+.work {
+  padding: 0 30px;
+  text-align: center;
+
+  & h5 {
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  & p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+
+  & img {
+    width: 168px;
+  }
+
+  & > a {
+    position: relative;
+    padding: 15px;
+
+    &:hover span,
+    &:focus span {
+      color: $grayDarkest;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      left: 0;
+      width: 100%;
+      background-color: $grayDarkest;
+    }
+  }
+
+  & > a::before {
+    content: '';
+    position: absolute;
+    left: 20%;
+    bottom: 0;
+    width: 60%;
+    height: 2px;
+    opacity: 0.3;
+    transition: all 0.3s;
+    background-color: $skyBlue;
+  }
+
+  & span {
+    font-size: 18px;
+    font-weight: 700;
+    color: $skyBlue;
+    transition: all 0.3s;
+  }
+}
