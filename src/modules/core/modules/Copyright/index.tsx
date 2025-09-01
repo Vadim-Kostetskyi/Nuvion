@@ -6,7 +6,8 @@ const Copyright = () => {
 
   return (
     <div className={styles.copyright}>
-      {t('copyright')} {t('Privacy')}
+      {t('copyright')}
+      {/* {t('Privacy')} */}
     </div>
   );
 };

@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
-import { links } from './data';
 import MailProne from '../MailProne';
 import Social from '../Social';
+import Copyright from '../Copyright';
+import { links } from './data';
 import { companyName } from 'utils/constants';
 import styles from './index.module.scss';
 
@@ -10,17 +11,20 @@ const FooterInfo = () => {
 
   return (
     <div className={styles.footerInfo}>
-      <Social />
       <div>
-        <h3>{companyName}</h3>
-        {links.map(({ label }) => (
-          <p>{t(`footer.${label}`)}</p>
-        ))}
+        <Social />
+        <div>
+          <h3>{companyName}</h3>
+          {links.map(({ label }) => (
+            <p>{t(`footer.${label}`)}</p>
+          ))}
+        </div>
+        <div>
+          <MailProne />
+          <MailProne mail={true} />
+        </div>
       </div>
-      <div>
-        <MailProne />
-        <MailProne mail={true} />
-      </div>
+      <Copyright />
     </div>
   );
 };

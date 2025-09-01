@@ -1,11 +1,13 @@
 @use 'styles/bootstrap' as *;
 
 .footerInfo {
-  display: flex;
-  justify-content: space-around;
+  & > div {
+    display: flex;
+    justify-content: space-around;
 
-  & h3 {
-    font-size: 22px;
-    font-weight: 600;
+    & h3 {
+      font-size: 22px;
+      font-weight: 600;
+    }
   }
 }
