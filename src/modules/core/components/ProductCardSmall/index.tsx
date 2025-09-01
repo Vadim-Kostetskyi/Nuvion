@@ -5,9 +5,10 @@ interface ProductCardSmall {
   image: string;
   title: string;
   date: string;
-  workPerformed: string;
-  address: string;
+  // workPerformed: string;
+  // address: string;
   description: string[];
+  latest?: boolean;
 }
 
 const ProductCardSmall: FC<ProductCardSmall> = ({
@@ -15,10 +16,15 @@ const ProductCardSmall: FC<ProductCardSmall> = ({
   title,
   date,
   description,
+  latest,
 }) => {
   return (
-    <div className={styles.productCardSmall}>
-      <img src={image} alt="" />
+    <div
+      className={latest ? styles.productCardLatest : styles.productCardSmall}
+    >
+      <div>
+        <img src={image} alt="" />
+      </div>
       <div>
         <h3>{title}</h3>
         <p>{date}</p>

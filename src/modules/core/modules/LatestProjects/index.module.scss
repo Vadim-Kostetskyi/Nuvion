@@ -1,0 +1,49 @@
+@use 'styles/bootstrap' as *;
+
+.latestProjects {
+  display: flex;
+  margin-bottom: 80px;
+
+  & > div:first-child {
+    width: 25%;
+    flex-shrink: 0;
+  }
+
+  & h2,
+  & p {
+    margin-bottom: 15px;
+  }
+
+  & p {
+    font-size: 18px;
+  }
+}
+
+.products {
+  // display: flex;
+  // flex-wrap: wrap;
+  // gap: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.link {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 2px solid $textPrimary;
+  border-radius: 30px;
+  transition: all 0.3s;
+
+  & span {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &:hover,
+  &:focus {
+    color: $darkGray;
+    border: 2px solid $pageBackground;
+  }
+}

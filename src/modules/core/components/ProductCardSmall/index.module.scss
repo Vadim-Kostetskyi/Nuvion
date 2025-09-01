@@ -1,8 +1,10 @@
 @use 'styles/bootstrap' as *;
 
-.productCardSmall {
+.productCardSmall,
+.productCardLatest {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 300px;
   width: 600px;
   overflow: hidden;
@@ -22,9 +24,26 @@
 
   & > div {
     padding: 20px;
+
     & *:not(:last-child) {
       margin-bottom: 15px;
     }
+  }
+}
+
+.productCardLatest {
+  width: calc(50% - 20px);
+  padding: 10px;
+  overflow: visible;
+
+  & img {
+    width: 220px;
+    height: 230px;
+  }
+
+  & > div {
+    // width: calc((100% - 20px) / 2);
+    padding: 10px;
   }
 }
 
