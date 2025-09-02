@@ -1,8 +1,58 @@
 @use 'styles/bootstrap' as *;
 
 .feedBack {
-  font-size: 200px;
-  text-align: center;
-  background-color: $ivory;
+  width: 100%;
   margin-bottom: 80px;
+
+  & > div {
+    display: flex;
+    gap: 60px;
+
+    & > * {
+      width: calc(50% - 30px);
+      flex-shrink: 0;
+    }
+  }
+
+  & h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+}
+
+.form {
+  & > div:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: -10px;
+
+    & > * {
+      width: calc(50% - 10px);
+    }
+  }
+
+  & h5 {
+    display: contents;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  & textarea {
+    width: 100%;
+    min-height: 200px;
+    resize: vertical;
+  }
+}
+
+.button {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 20px;
+  color: $whiteColor;
+  background-color: $skyBlue;
+  border: none;
+  border-radius: 30px;
 }
