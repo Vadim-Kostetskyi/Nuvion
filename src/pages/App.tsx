@@ -11,7 +11,7 @@ const App = () => (
     <Route path="/ua/*" element={<HomePage />} />
 
     {/* шведська */}
-    <Route path="/nl/*" element={<HomePage />} />
+    <Route path="/en/*" element={<HomePage />} />
 
     {/* 404 → редірект */}
     <Route path="*" element={<Navigate to="/" replace />} />

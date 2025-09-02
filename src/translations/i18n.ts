@@ -17,12 +17,12 @@ const resources = {
 };
 
 const path = window.location.pathname;
-let pathLang: 'ua' | 'en' | 'nl' = 'en';
+let pathLang: 'ua' | 'en' | 'nl' = 'nl';
 
 if (path.startsWith('/ua')) {
   pathLang = 'ua';
-} else if (path.startsWith('/nl')) {
-  pathLang = 'nl';
+} else if (path.startsWith('/en')) {
+  pathLang = 'en';
 }
 
 i18n.use(initReactI18next).init({
