@@ -5,7 +5,9 @@ export const email = 'info@nuvion.nl';
 export const phoneNumber = '020 - 634 36 38';
 
 export enum nameProps {
-  name = 'user_name',
-  email = 'user_email',
+  name = 'name',
+  lastName = 'lastName',
+  email = 'email',
   message = 'message',
+  phoneNumber = 'phoneNumber',
 }

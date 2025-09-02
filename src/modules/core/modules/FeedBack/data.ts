@@ -2,7 +2,11 @@ import { useTranslation } from 'react-i18next';
 import { nameProps } from 'utils/constants';
 
 export type FormProps = {
-  name: nameProps.name | nameProps.email | nameProps.message;
+  name:
+    | nameProps.name
+    | nameProps.email
+    | nameProps.phoneNumber
+    | nameProps.lastName;
   title: string;
   type?: string;
   isTextarea?: boolean;
@@ -21,7 +25,7 @@ export const useFormProps = () => {
     },
     {
       title: t('feedBack.lastName'),
-      name: nameProps.name,
+      name: nameProps.lastName,
       type: 'text',
       require: true,
     },
@@ -33,19 +37,13 @@ export const useFormProps = () => {
     },
     {
       title: t('feedBack.phoneNumber'),
-      name: nameProps.name,
+      name: nameProps.phoneNumber,
       type: 'text',
     },
-    // {
-    //   title: t('feedBack.message'),
-    //   name: nameProps.message,
-    //   isTextarea: true,
-    // },
   ];
 
   const titleProps = {
     title: t('feedBack.contactUs'),
-    // text: t('Feedback.text'),
   };
 
   return { formProps, titleProps };

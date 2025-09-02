@@ -10,6 +10,19 @@
     "callUs": "Bel ons",
     "orSendEmail": "Of stuur een e-mail"
   },
+  "feedBack": {
+    "contactUs": "Kontakt oss",
+    "name": "Fornavn",
+    "lastName": "Etternavn",
+    "phoneNumber": "Telefonnummer",
+    "email": "E-postadresse",
+    "message": "Melding",
+    "send": "Send"
+  },
+  "toastify": {
+    "success": "Meldingen din er sendt. Vi vil kontakte deg så snart som mulig.",
+    "error": "Meldingen ble ikke sendt, vennligst kontakt oss via våre kontaktdetaljer."
+  },
   "copyright": "Copyright Nuvion™  2025 ©",
   "Privacy": "Privacy statement | Algemene Voorwaarden"
 }

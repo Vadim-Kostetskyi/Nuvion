@@ -34,7 +34,7 @@
   }
 
   & h5 {
-    display: contents;
+    display: inline-block;
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 10px;
@@ -44,10 +44,14 @@
     width: 100%;
     min-height: 200px;
     resize: vertical;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background: $pageBackground;
   }
 }
 
-.button {
+.button,
+.buttonLoad {
   font-size: 18px;
   font-weight: 600;
   padding: 10px 20px;
@@ -55,4 +59,8 @@
   background-color: $skyBlue;
   border: none;
   border-radius: 30px;
+}
+
+.buttonLoad {
+  background-color: $gray;
 }

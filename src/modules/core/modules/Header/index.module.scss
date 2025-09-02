@@ -6,7 +6,7 @@
   width: 100vw;
   height: 70px;
   background-color: $pageBackground;
-  z-index: 100000;
+  z-index: 1000;
   box-shadow: 1px 1px 10px $textSecondary;
 
   & > div {

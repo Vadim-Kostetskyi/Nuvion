@@ -1,9 +1,8 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { toast, ToastContainer } from 'react-toastify';
-import Title from 'modules/core/components/Title';
 import InputFeedback from 'modules/core/components/InputFeedback';
 import { useFormProps } from './data';
 import 'react-toastify/dist/ReactToastify.css';
@@ -36,11 +35,11 @@ const FeedBack = () => {
     if (form.current) {
       emailjs
         .sendForm(
-          process.env.REACT_APP_SERVICE_ID || '',
-          process.env.REACT_APP_TEMPLATE_ID || '',
+          import.meta.env.VITE_SERVICE_ID,
+          import.meta.env.VITE_TEMPLATE_ID,
           form.current,
           {
-            publicKey: process.env.REACT_APP_PUBLIC_KEY || '',
+            publicKey: import.meta.env.VITE_PUBLIC_KEY,
           }
         )
         .then(
