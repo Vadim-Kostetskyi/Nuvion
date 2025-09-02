@@ -11,9 +11,11 @@ import firmPic from 'assets/Nieuw-pand-768x576.jpg';
 import styles from './index.module.scss';
 
 export interface Form {
-  user_name: string;
-  user_email: string;
+  name: string;
+  lastName: string;
+  email: string;
   message: string;
+  phoneNumber: string;
 }
 const FeedBack = () => {
   const [isLoading, setIsLoading] = useState(false);
