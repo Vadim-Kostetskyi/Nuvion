@@ -28,7 +28,7 @@ if (path.startsWith('/ua')) {
 i18n.use(initReactI18next).init({
   resources,
   lng: pathLang,
-  fallbackLng: 'en',
+  fallbackLng: 'nl',
   interpolation: {
     escapeValue: false,
   },

@@ -23,6 +23,35 @@
     "success": "Meldingen din er sendt. Vi vil kontakte deg så snart som mulig.",
     "error": "Meldingen ble ikke sendt, vennligst kontakt oss via våre kontaktdetaljer."
   },
+  "proposedWorks": {
+    "readMore": "Lees meer",
+    "restoration": "Restauratie",
+    "restorationDesc": "Zoekt u een bedrijf met jarenlange ervaring in de restauratie? Dan bent u bij ons aan het juiste adres!",
+    "renovation": "Renovatie",
+    "renovationDesc": "Gebouwrenovatie of verbouwing? Lees hoe wij dat doen en voor wie wij reeds hebben gewerkt.",
+    "maintenance": "Onderhoud",
+    "maintenanceDesc": "Wij voeren onderhoud uit voor verschillende instanties, waaronder b.v. ook overheidsinstellingen.",
+    "newConstruction": "Nieuwbouw",
+    "newConstructionDesc": "Iets nieuws laten bouwen? We denken graag met u mee over nieuw- of verbouw zodat u weer jaren vooruit kunt."
+  },
+  "representation": {
+    "title": "Even voorstellen",
+    "text1": " Witte Bouw is al decennialang gespecialiseerd in gebouw onderhoud, restaureren, bouwen en renoveren van kleinere panden tot (rijks-)monumenten in Amsterdam en omstreken.",
+    "text2": "Kwaliteit en vakkennis staat daarbij altijd op de eerste plaats. Wij behoren tot een selecte groep experts die het certificaat ‘Erkend Restauratie Bouwbedrijf’ mogen voeren en hebben al talloze monumentale gebouwen onder handen genomen.",
+    "text3": "Onze opdrachtgevers zijn uiteenlopend. Van VvE’s, tot (semi-)overheidsinstellingen, woningbouwcorporaties, beleggers, beheerders van scholen, bedrijven of particulieren.",
+    "text4": " Ook werken we vaak in opdracht van architectenbureaus, constructeurs of stedenbouwkundigen.",
+    "text5": "We doen meer dan alleen mooie bouwprojecten uitvoeren. Onze medewerkers hebben liefde voor het vak en oog voor detail. We bouwen op elkaar en lachen veel, creëren oplossingen en zijn proactieve meedenkers. We maken realistische plannen, heldere kostenopgaves en communiceren graag duidelijk.",
+    "text6": "Wilt u meer weten over ons bedrijf? Klik dan op de button hieronder.",
+    "moreAbout": "Meer over Nuvion"
+  },
+  "prescription": {
+    "text1": "Experts in restauratie, renovatie en onderhoud sinds 1932",
+    "text2": "Proactief, oplossingsgericht & realistisch",
+    "text3": "Ervaren medewerkers door vakkennis & opleiding",
+    "text4": "Hoge klanttevredenheid volgens bouwnu.nl",
+    "text5": "Innovatief & gericht op de toekomst",
+    "text6": "Vriendelijke en zorgvuldige communicatie"
+  },
   "copyright": "Copyright Nuvion™  2025 ©",
   "Privacy": "Privacy statement | Algemene Voorwaarden"
 }

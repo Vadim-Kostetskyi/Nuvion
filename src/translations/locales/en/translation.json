@@ -23,6 +23,35 @@
     "success": "Your message has been sent. We will get back to you as soon as possible.",
     "error": "The message was not sent, please contact us using the provided contact details."
   },
+  "proposedWorks": {
+    "readMore": "Read more",
+    "restoration": "Restoration",
+    "restorationDesc": "Looking for a company with years of experience in restoration? You’ve come to the right place!",
+    "renovation": "Renovation",
+    "renovationDesc": "Building renovation or remodeling? See how we do it and who we have worked for.",
+    "maintenance": "Maintenance",
+    "maintenanceDesc": "We provide maintenance for various organizations, including government institutions.",
+    "newConstruction": "New Construction",
+    "newConstructionDesc": "Want to build something new? We are happy to assist with new construction or remodeling so you can enjoy it for years."
+  },
+  "representation": {
+    "title": "Let us introduce ourselves",
+    "text1": "Witte Bouw has been specializing for decades in building maintenance, restoration, construction, and renovation — from small properties to (national) monuments in Amsterdam and the surrounding areas.",
+    "text2": "Quality and expertise always come first. We belong to a select group of experts certified as a 'Recognized Restoration Construction Company' and have worked on numerous historic buildings.",
+    "text3": "Our clients are diverse: from homeowners’ associations (VvEs) to (semi-)government institutions, housing corporations, investors, school managers, companies, or private individuals.",
+    "text4": "We also often work on behalf of architectural firms, structural engineers, or urban planners.",
+    "text5": "We do more than just execute beautiful construction projects. Our employees are passionate about their craft and attentive to detail. We support each other, laugh a lot, create solutions, and proactively contribute ideas. We make realistic plans, provide clear cost estimates, and communicate transparently.",
+    "text6": "Want to know more about our company? Click the button below.",
+    "moreAbout": "More about Nuvion"
+  },
+  "prescription": {
+    "text1": "Experts in restoration, renovation, and maintenance since 1932",
+    "text2": "Proactive, solution-oriented & realistic",
+    "text3": "Experienced staff through expertise & training",
+    "text4": "High customer satisfaction according to bouwnu.nl",
+    "text5": "Innovative & future-focused",
+    "text6": "Friendly and attentive communication"
+  },
   "copyright": "Copyright Nuvion™ 2025 ©",
   "Privacy": "Privacy statement | Terms and Conditions"
 }

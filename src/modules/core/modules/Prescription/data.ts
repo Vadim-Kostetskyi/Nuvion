@@ -1,23 +1,23 @@
 export const list1 = [
   {
-    label: 'Experts in restauratie, renovatie en onderhoud sinds 1932',
+    label: 'text1',
   },
   {
-    label: 'Proactief, oplossingsgericht & realistisch',
+    label: 'text2',
   },
   {
-    label: 'Ervaren medewerkers door vakkennis & opleiding',
+    label: 'text3',
   },
 ];
 
 export const list2 = [
   {
-    label: 'Hoge klanttevredenheid volgens bouwnu.nl',
+    label: 'text4',
   },
   {
-    label: 'Innovatief & gericht op de toekomst',
+    label: 'text5',
   },
   {
-    label: 'Vriendelijke en zorgvuldige communicatie',
+    label: 'text6',
   },
 ];
