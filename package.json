@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@react-google-maps/api": "^2.20.7",
     "emailjs": "^4.0.3",
     "i18next": "^25.4.2",
     "path": "^0.12.7",

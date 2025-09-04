@@ -52,6 +52,11 @@
     "text5": "Innovatief & gericht op de toekomst",
     "text6": "Vriendelijke en zorgvuldige communicatie"
   },
+  "contact": {
+    "contactDetails": "Contactgegevens",
+    "pleaseContactUs": "Neem contact op"
+  },
+  "address": "Platinaweg 25, 2544 EZ, Den Haag",
   "copyright": "Copyright Nuvion™  2025 ©",
   "Privacy": "Privacy statement | Algemene Voorwaarden"
 }

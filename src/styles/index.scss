@@ -7,17 +7,10 @@
 }
 
 a {
+  display: inline-block;
   outline: none;
   text-decoration: none;
   color: $textPrimary;
-
-  &:active {
-    color: $textPrimary;
-  }
-
-  &:visited {
-    color: $textPrimary;
-  }
 }
 
 button {
