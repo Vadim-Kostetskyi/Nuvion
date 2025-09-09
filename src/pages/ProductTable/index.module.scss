@@ -1,0 +1,26 @@
+@use 'styles/bootstrap' as *;
+
+.tableContainer {
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f0f0f0;
+  }
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}

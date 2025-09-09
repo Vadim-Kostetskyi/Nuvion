@@ -19,8 +19,8 @@ const LatestProjects = () => {
         {products
           .slice(-4)
           .reverse()
-          .map((props) => (
-            <ProductCardSmall {...props} latest={true} />
+          .map((props, index) => (
+            <ProductCardSmall {...props} latest={true} key={index} />
           ))}
       </div>
     </section>

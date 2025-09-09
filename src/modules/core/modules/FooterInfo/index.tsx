@@ -16,7 +16,7 @@ const FooterInfo = () => {
         <div>
           <h3>{companyName}</h3>
           {links.map(({ label }) => (
-            <p>{t(`footer.${label}`)}</p>
+            <p key={label}>{t(`footer.${label}`)}</p>
           ))}
         </div>
         <div>

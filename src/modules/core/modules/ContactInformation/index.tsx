@@ -12,7 +12,7 @@ const ContactInformation = () => {
         <div>
           <h2>{t('contact.contactDetails')}</h2>
           {contactDetails.map(({ icon, label }) => (
-            <div className={styles.iconBox}>
+            <div className={styles.iconBox} key={label}>
               <img src={icon} alt="" />
               <p>{t(label)}</p>
             </div>

@@ -69,8 +69,13 @@ const FeedBack = () => {
           onSubmit={handleSubmit(sendEmail)}
         >
           <div>
-            {formProps.map((props) => (
-              <InputFeedback {...props} register={register} errors={errors} />
+            {formProps.map((props, index) => (
+              <InputFeedback
+                {...props}
+                register={register}
+                errors={errors}
+                key={index}
+              />
             ))}
           </div>
           <label>

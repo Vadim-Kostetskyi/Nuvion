@@ -7,7 +7,6 @@ const LanguageSelector = () => {
   const { i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location.pathname.startsWith('/nl'));
 
   const handleChange = (lang: string) => {
     const language = lang.toLocaleLowerCase();
@@ -25,7 +24,6 @@ const LanguageSelector = () => {
     : location.pathname.startsWith('/ua')
     ? 'UA'
     : 'NL';
-  console.log(currentLang);
 
   return (
     <DropDown

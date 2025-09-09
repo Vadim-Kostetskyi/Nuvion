@@ -8,13 +8,11 @@ const ProposedWorks = () => {
   return (
     <section className={styles.proposedWorks}>
       {proposedWorksList.map(({ image, title, description, link }) => (
-        <a className={styles.work} href={link}>
+        <a className={styles.work} href={link} key={title}>
           <img src={image} alt="" />
           <h5>{t(`proposedWorks.${title}`)}</h5>
           <p>{t(`proposedWorks.${description}`)}</p>
-          <a href={link}>
-            <span>{t('proposedWorks.readMore')}</span>
-          </a>
+          <span>{t('proposedWorks.readMore')}</span>
         </a>
       ))}
     </section>
