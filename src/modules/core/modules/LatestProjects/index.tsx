@@ -1,11 +1,13 @@
 import { products } from 'products';
 import ProductCardSmall from 'modules/core/components/ProductCardSmall';
 import ButtonLink from 'components/ButtonLink';
-// import { useGetProductsQuery } from 'storeRedux/';
+import { useGetLaatsteProductsQuery } from 'storeRedux/slyse/productsApi';
 import styles from './index.module.scss';
 
 const LatestProjects = () => {
-  const { data } = useGetProductsQuery();
+  const { data } = useGetLaatsteProductsQuery();
+  console.log('3242332434', data);
+
   return (
     <section className={styles.latestProjects}>
       <div>
