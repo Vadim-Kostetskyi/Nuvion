@@ -1,6 +1,8 @@
 @use 'styles/bootstrap' as *;
 
 .footerInfo {
+  padding: 25px 0 0;
+  border-top: 1px solid $lightGray;
   & > div {
     display: flex;
     justify-content: space-around;

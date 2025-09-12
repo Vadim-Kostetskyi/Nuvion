@@ -28,7 +28,6 @@ const ProjectsTable: React.FC = () => {
     fetch('http://localhost/Nuvion-data-base/api/v1/archive/products/')
       .then(async (res) => {
         const text = await res.text();
-        console.log('Server response:', text); // бачимо реальну відповідь
         try {
           const data = JSON.parse(text);
           setProjects(data);

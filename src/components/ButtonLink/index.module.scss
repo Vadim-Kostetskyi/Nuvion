@@ -1,0 +1,22 @@
+@use 'styles/bootstrap' as *;
+
+.link {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 700;
+  border: 2px solid $textPrimary;
+  border-radius: 30px;
+  transition: all 0.3s;
+
+  & span {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &:hover,
+  &:focus {
+    color: $darkGray;
+    border: 2px solid $pageBackground;
+  }
+}

@@ -2,18 +2,19 @@
 
 .proposedWorks {
   display: flex;
+  gap: 20px;
   padding: 80px 0;
 }
 
 .work {
-  padding: 0 30px;
+  padding: 0 10px;
   text-align: center;
 
   & h5 {
     font-size: 18px;
     font-weight: 800;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin: 10px 0;
   }
   & p {
     font-size: 18px;
