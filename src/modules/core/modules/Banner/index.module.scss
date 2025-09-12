@@ -12,11 +12,11 @@
   //     transparent
   //   ),
   //   linear-gradient(180deg, $deepSpace, $darkSlate);
-  background-image: url('assets/banner3.png');
-
-  background-repeat: no-repeat; /* щоб не повторювався */
-  background-size: cover; /* щоб заповнив блок */
+  background-image: url('assets/banner4.png');
+  background-repeat: no-repeat;
+  // background-size: cover; /* заповнив блок */
   background-position: center;
+  background-color: $blackColor;
 
   & > div {
     margin: auto;
