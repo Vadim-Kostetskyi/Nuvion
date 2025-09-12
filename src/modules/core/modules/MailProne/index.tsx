@@ -6,15 +6,16 @@ import { email, phoneNumber } from 'utils/constants';
 import styles from './index.module.scss';
 
 interface MailProneProps {
-  mail?: boolean;
+  isEmail?: boolean;
+  isAddress?: boolean;
 }
 
-const MailProne: FC<MailProneProps> = ({ mail }) => {
+const MailProne: FC<MailProneProps> = ({ isEmail, isAddress }) => {
   const { t } = useTranslation();
 
   return (
     <div className={styles.contact}>
-      {mail ? (
+      {isEmail && (
         <div>
           <h3>{t('footer.orSendEmail')}</h3>
           <div>
@@ -22,7 +23,17 @@ const MailProne: FC<MailProneProps> = ({ mail }) => {
             <span>{email}</span>
           </div>
         </div>
-      ) : (
+      )}
+      {isAddress && (
+        <div>
+          <h3>{t('footer.ourAddress')}</h3>
+          <div>
+            <Mail />
+            <span>{t('address')}</span>
+          </div>
+        </div>
+      )}
+      {!isEmail && !isAddress && (
         <div>
           <h3>{t('footer.callUs')}</h3>
           <div>

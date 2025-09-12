@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import Map from '../Map/insex';
+import Map from '../Map';
 import { contactDetails } from './data';
 import styles from './index.module.scss';
 

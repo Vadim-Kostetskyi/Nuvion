@@ -21,7 +21,8 @@ const FooterInfo = () => {
         </div>
         <div>
           <MailProne />
-          <MailProne mail={true} />
+          <MailProne isEmail={true} />
+          <MailProne isAddress={true} />
         </div>
       </div>
       <Copyright />

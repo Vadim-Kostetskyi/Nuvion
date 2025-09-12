@@ -7,8 +7,8 @@ import InputFeedback from 'modules/core/components/InputFeedback';
 import { useFormProps } from './data';
 import 'react-toastify/dist/ReactToastify.css';
 import { nameProps } from 'utils/constants';
-import firmPic from 'assets/Nieuw-pand-768x576.jpg';
 import styles from './index.module.scss';
+import Map from '../Map';
 
 export interface Form {
   name: string;
@@ -97,7 +97,7 @@ const FeedBack = () => {
             {isLoading && <div className={styles.loader}></div>}
           </div>
         </form>
-        <img src={firmPic} alt="" />
+        <Map />
       </div>
       <ToastContainer />
     </section>
