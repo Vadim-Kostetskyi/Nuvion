@@ -1,8 +1,7 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 import HomePage from './HomePage';
-// import ProductForm from './ProductFormPage';
+import AdminPage from './AdminPage/insex';
 import 'styles/index.scss';
-import ProjectTable from './ProductTable';
 
 const App = () => (
   <Routes>
@@ -15,7 +14,7 @@ const App = () => (
     {/* шведська */}
     <Route path="/en/*" element={<HomePage />} />
 
-    <Route path="/dashboard" element={<ProjectTable />} />
+    <Route path="/dashboard" element={<AdminPage />} />
 
     {/* 404 → редірект */}
     <Route path="*" element={<Navigate to="/" replace />} />

@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { BASE_URL } from '../routes';
-import { GetProductsResponse, Product } from '../types';
+import { Product } from '../types';
 
 export const productsApi = createApi({
   reducerPath: 'productsApi',
@@ -20,7 +20,6 @@ export const productsApi = createApi({
       transformResponse: (response: Product[]) =>
         response.map((product) => ({
           ...product,
-          image: BASE_URL + product.image,
         })),
     }),
     getLaatsteProducts: builder.query<Product[], void>({
@@ -28,7 +27,6 @@ export const productsApi = createApi({
       transformResponse: (response: Product[]) =>
         response.map((product) => ({
           ...product,
-          image: BASE_URL + product.image,
         })),
     }),
   }),

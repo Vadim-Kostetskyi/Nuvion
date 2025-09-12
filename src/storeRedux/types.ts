@@ -16,19 +16,17 @@ export type ValueKey = keyof AttributeValue;
 export type Attribute = {
   extraPrice: string;
   quantity: string;
-} & AttributeValue & Attributes;
+} & AttributeValue &
+  Attributes;
 
 export interface Product {
-  name: string;
-  price: number;
-  image: string;
-  quantity: string;
-  category: string;
-  description: string;
-  attributes?: Attribute[];
-  newProduct?: string;
-  popularProduct?: string;
+  title: string;
   slug: string;
+  date: string;
+  image: string;
+  work_performed: string;
+  address: string;
+  description: string;
 }
 
 export interface GetProductsResponse {

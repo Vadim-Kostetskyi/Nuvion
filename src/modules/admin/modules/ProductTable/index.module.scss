@@ -5,6 +5,16 @@
   overflow-x: auto;
 }
 
+.addItemBtn {
+  position: fixed;
+  right: 55px;
+  top: 100px;
+
+  & img {
+    width: 80px;
+  }
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;
