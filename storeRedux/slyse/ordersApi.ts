@@ -7,7 +7,6 @@ export const ordersApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: BASE_URL,
     prepareHeaders: (headers, { endpoint }) => {
-      // Для Postnord endpoint не додаємо Authorization
       if (
         endpoint !== 'getPostnordServicePoints' &&
         endpoint !== 'calculateDelivery'

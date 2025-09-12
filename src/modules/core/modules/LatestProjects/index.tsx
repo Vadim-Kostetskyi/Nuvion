@@ -1,9 +1,11 @@
 import { products } from 'products';
 import ProductCardSmall from 'modules/core/components/ProductCardSmall';
-import styles from './index.module.scss';
 import ButtonLink from 'components/ButtonLink';
+// import { useGetProductsQuery } from 'storeRedux/';
+import styles from './index.module.scss';
 
 const LatestProjects = () => {
+  const { data } = useGetProductsQuery();
   return (
     <section className={styles.latestProjects}>
       <div>

@@ -1,20 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { productsApi } from './slyse/ordersApi';
-// import { authApi } from "./authApi";
-// import { ordersApi } from "./ordersApi";
+import { productsApi } from './slyse/productsApi';
+import { ordersApi } from './slyse/ordersApi';
 
 export const store = configureStore({
   reducer: {
     [productsApi.reducerPath]: productsApi.reducer,
-    // [authApi.reducerPath]: authApi.reducer,
-    // [ordersApi.reducerPath]: ordersApi.reducer,
+    [ordersApi.reducerPath]: ordersApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(
-      productsApi.middleware
-      // authApi.middleware,
-      // ordersApi.middleware
-    ),
+    getDefaultMiddleware().concat(ordersApi.middleware, productsApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
