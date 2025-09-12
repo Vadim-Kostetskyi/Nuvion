@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import PhoneCall from 'assets/svg/PhoneCall';
 import Mail from 'assets/svg/Mail';
+import locationIcon from 'assets/icons/location.png';
 import { email, phoneNumber } from 'utils/constants';
 import styles from './index.module.scss';
 
@@ -29,7 +30,7 @@ const Contacts: FC<ContactsProps> = ({ isEmail, isAddress, isPhone }) => {
         <div>
           <h3>{t('footer.ourAddress')}</h3>
           <div>
-            <Mail />
+            <img src={locationIcon} alt="location" />
             <span>{t('address')}</span>
           </div>
         </div>

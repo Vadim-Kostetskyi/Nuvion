@@ -1,7 +1,8 @@
 @use 'styles/bootstrap' as *;
 
 .contact {
-  & svg {
+  & svg,
+  & img {
     width: 30px;
     margin-right: 10px;
   }
