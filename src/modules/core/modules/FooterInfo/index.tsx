@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import MailProne from '../MailProne';
+import Contacts from '../Contacts';
 import Social from '../Social';
 import Copyright from '../Copyright';
 import { links } from './data';
@@ -20,9 +20,9 @@ const FooterInfo = () => {
           ))}
         </div>
         <div>
-          <MailProne />
-          <MailProne isEmail={true} />
-          <MailProne isAddress={true} />
+          <Contacts isPhone={true} />
+          <Contacts isEmail={true} />
+          <Contacts isAddress={true} />
         </div>
       </div>
       <Copyright />

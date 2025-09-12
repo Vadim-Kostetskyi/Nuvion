@@ -15,7 +15,7 @@ const HomePage = () => {
       <Representation />
       <Prescription />
       <LatestProjects />
-      <ContactInformation />
+      {/* <ContactInformation /> */}
       <FeedBack />
     </MainLayout>
   );

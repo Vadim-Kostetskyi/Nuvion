@@ -5,12 +5,13 @@ import Mail from 'assets/svg/Mail';
 import { email, phoneNumber } from 'utils/constants';
 import styles from './index.module.scss';
 
-interface MailProneProps {
+interface ContactsProps {
+  isPhone?: boolean;
   isEmail?: boolean;
   isAddress?: boolean;
 }
 
-const MailProne: FC<MailProneProps> = ({ isEmail, isAddress }) => {
+const Contacts: FC<ContactsProps> = ({ isEmail, isAddress, isPhone }) => {
   const { t } = useTranslation();
 
   return (
@@ -33,7 +34,7 @@ const MailProne: FC<MailProneProps> = ({ isEmail, isAddress }) => {
           </div>
         </div>
       )}
-      {!isEmail && !isAddress && (
+      {isPhone && (
         <div>
           <h3>{t('footer.callUs')}</h3>
           <div>
@@ -46,4 +47,4 @@ const MailProne: FC<MailProneProps> = ({ isEmail, isAddress }) => {
   );
 };
 
-export default MailProne;
+export default Contacts;
