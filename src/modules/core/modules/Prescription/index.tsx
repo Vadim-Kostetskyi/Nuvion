@@ -1,5 +1,5 @@
 import { list1, list2 } from './data';
-import image from 'assets/Ontwerp-zonder-titel-55-150x150.png';
+import image from 'assets/Ontwerp-zonder-titel-55-150x150red.png';
 import styles from './index.module.scss';
 import { useTranslation } from 'react-i18next';
 

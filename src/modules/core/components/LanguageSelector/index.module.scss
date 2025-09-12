@@ -12,7 +12,7 @@
   border-radius: 8px;
   cursor: pointer;
   outline: none;
-  appearance: none; // прибирає стандартну стрілку
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   transition: border 0.2s, box-shadow 0.2s;
@@ -22,8 +22,13 @@
   }
 
   &:focus {
-    border-color: $blue;
-    box-shadow: 0 0 0 2px $blue20;
+    border-color: $pageRed;
+    box-shadow: 0 0 0 2px $alertRed;
+  }
+
+  & option:hover,
+  & option:focus {
+    background-color: $pageRed;
   }
 
   /* Кастомна стрілка */
