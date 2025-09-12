@@ -57,6 +57,16 @@
     "contactDetails": "Contactgegevens",
     "pleaseContactUs": "Neem contact op"
   },
+  "products": {
+    "title": "Naam",
+    "dateCompletion": "Voltooiingsdatum",
+    "image": "Afbeelding",
+    "work_performed": "Uitgevoerde werken",
+    "address": "Adres",
+    "description": "Beschrijving",
+    "create": "Aanmaken",
+    "edit": "Wijzigingen opslaan"
+  },
   "address": "Platinaweg 25, 2544 EZ, Den Haag",
   "copyright": "Copyright Nuvion™  2025 ©",
   "Privacy": "Privacy statement | Algemene Voorwaarden"

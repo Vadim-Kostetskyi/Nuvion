@@ -1,6 +1,13 @@
-import { useState, FormEvent } from 'react';
+import { useState, useEffect, FormEvent } from 'react';
 import styles from './index.module.scss';
 import { formList } from './data';
+import { useTranslation } from 'react-i18next';
+import slugify from 'slugify';
+
+interface ProductFormProps {
+  product?: any;
+  onClose: () => void;
+}
 
 async function createProduct(formData: FormData) {
   const response = await fetch(
@@ -14,61 +21,96 @@ async function createProduct(formData: FormData) {
   return response.json();
 }
 
-interface ProductFormProps {
-  onClose: () => void;
+async function updateProduct(id: number, formData: FormData) {
+  const response = await fetch(
+    `http://localhost/Nuvion-data-base/api/v1/archive/products/${id}`,
+    { method: 'POST', body: formData }
+  );
+
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(errorData.error || 'Failed to update product');
+  }
+  return response.json();
 }
 
-const ProductForm: React.FC<ProductFormProps> = ({ onClose }) => {
-  const [title, setTitle] = useState('');
-  const [slug, setSlug] = useState('');
-  const [description, setDescription] = useState('');
-  const [date, setDate] = useState('');
+const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
+  const { t } = useTranslation();
+
   const [imageFile, setImageFile] = useState<File | null>(null);
+  const [formState, setFormState] = useState<any>({});
 
-  const handleSubmit = async (e: FormEvent) => {
+  useEffect(() => {
+    if (product) {
+      setFormState(product);
+    }
+  }, [product]);
+  console.log(formState);
+  console.log(123);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormState((prev: any) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(e.target.title.value);
+    const formData = new FormData(e.currentTarget);
 
-    if (!imageFile) {
-      alert('Please select an image');
-      return;
+    if (imageFile) formData.append('image', imageFile);
+
+    const title = formData.get('title') as string | null;
+    formData.append('slug', slugify(title || '', { lower: true }));
+    for (let [key, value] of formData.entries()) {
+      console.log(key, value);
     }
 
-    const formData = new FormData();
-    formData.append('title', title);
-    formData.append('slug', slug);
-    formData.append('description', description);
-    formData.append('date', date);
-    formData.append('image', imageFile);
+    try {
+      let result;
+      if (product && product.id) {
+        console.log(123);
 
-    // try {
-    //   const result = await createProduct(formData);
-    //   console.log('Product created:', result);
-    //   alert(`Product created with ID: ${result.id}`);
-    //   onClose();
-    // } catch (err) {
-    //   console.error(err);
-    //   alert('Failed to create product');
-    // }
+        // оновлення
+        result = await updateProduct(product.id, formData);
+        alert(`Product updated with ID: ${result.id}`);
+      } else {
+        // створення
+        if (!imageFile) {
+          alert('Please select an image');
+          return;
+        }
+        result = await createProduct(formData);
+        alert(`Product created with ID: ${result.id}`);
+      }
+      onClose();
+    } catch (err: any) {
+      console.error(err);
+      alert(`111, ${err.message}` || 'Operation failed');
+    }
   };
 
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-        <h2>Create Product</h2>
+        <h2>{product ? t('products.edit') : t('products.create')}</h2>
         <form onSubmit={handleSubmit} className={styles.form}>
           {formList.map(({ title }) => (
             <input
+              key={title}
               type="text"
               className={styles.input}
               name={title}
-              placeholder={title}
+              placeholder={t(`products.${title}`)}
+              value={formState[title] || ''}
+              onChange={handleChange}
             />
           ))}
           <input
+            name="date"
             type="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
+            value={formState.date || ''}
+            onChange={handleChange}
           />
           <input
             type="file"
@@ -77,8 +119,16 @@ const ProductForm: React.FC<ProductFormProps> = ({ onClose }) => {
               setImageFile(e.target.files ? e.target.files[0] : null)
             }
           />
-          <textarea name="" placeholder="description" rows={15}></textarea>
-          <button type="submit">Create Product</button>
+          <textarea
+            name="description"
+            placeholder={t('products.description')}
+            rows={15}
+            value={formState.description || ''}
+            onChange={handleChange}
+          ></textarea>
+          <button type="submit">
+            {product ? t('products.edit') : t('products.create')}
+          </button>
         </form>
       </div>
     </div>

@@ -57,6 +57,16 @@
     "contactDetails": "Contact details",
     "pleaseContactUs": "Get in touch"
   },
+  "products": {
+    "title": "Name",
+    "dateCompletion": "Completion Date",
+    "image": "Image",
+    "work_performed": "Work Performed",
+    "address": "Address",
+    "description": "Description",
+    "create": "Create",
+    "edit": "Save changes"
+  },
   "address": "Platinaweg 25, 2544 EZ, The Hague",
   "copyright": "Copyright Nuvion™ 2025 ©",
   "Privacy": "Privacy statement | Terms and Conditions"

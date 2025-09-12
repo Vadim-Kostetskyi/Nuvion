@@ -3,7 +3,7 @@ export const formList = [
     title: 'title',
   },
   {
-    title: 'workPerformed',
+    title: 'work_performed',
   },
   {
     title: 'address',

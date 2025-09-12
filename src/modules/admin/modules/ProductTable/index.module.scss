@@ -34,3 +34,20 @@
   height: 200px;
   object-fit: cover;
 }
+
+.funcButtons {
+  gap: 35px;
+  height: 100%;
+
+  & > div {
+    margin: auto;
+    width: fit-content;
+    & :nth-child(n) {
+      width: 30px;
+    }
+
+    & :nth-child(1) {
+      margin-right: 45px;
+    }
+  }
+}
