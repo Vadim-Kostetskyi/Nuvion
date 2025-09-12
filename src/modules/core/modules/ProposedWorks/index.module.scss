@@ -26,24 +26,25 @@
     width: 168px;
   }
 
-  & > a {
+  & > span {
     position: relative;
     padding: 15px;
 
-    &:hover span,
-    &:focus span {
-      color: $grayDarkest;
+    &:hover,
+    &:focus {
+      color: $alertRed;
     }
 
     &:hover::before,
     &:focus::before {
+      content: '';
       left: 0;
       width: 100%;
-      background-color: $grayDarkest;
+      background-color: $alertRed;
     }
   }
 
-  & > a::before {
+  & > span::before {
     content: '';
     position: absolute;
     left: 20%;
@@ -52,13 +53,13 @@
     height: 2px;
     opacity: 0.3;
     transition: all 0.3s;
-    background-color: $skyBlue;
+    background-color: $pageRed;
   }
 
   & span {
     font-size: 18px;
     font-weight: 700;
-    color: $skyBlue;
+    color: $pageRed;
     transition: all 0.3s;
   }
 }

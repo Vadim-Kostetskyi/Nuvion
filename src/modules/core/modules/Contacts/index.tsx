@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import PhoneCall from 'assets/svg/PhoneCall';
 import Mail from 'assets/svg/Mail';
-import locationIcon from 'assets/icons/location.png';
+import locationIcon from 'assets/icons/locationWhite.png';
 import { email, phoneNumber } from 'utils/constants';
 import styles from './index.module.scss';
 

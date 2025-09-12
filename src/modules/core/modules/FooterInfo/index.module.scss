@@ -1,7 +1,6 @@
 @use 'styles/bootstrap' as *;
 
 .footerInfo {
-  padding: 25px 0 0;
   border-top: 1px solid $lightGray;
   & > div {
     display: flex;
@@ -11,5 +10,15 @@
       font-size: 22px;
       font-weight: 600;
     }
+  }
+
+  & > div:first-child {
+    padding: 25px 0 0;
+    color: white;
+    background-color: $pageBackgroundBlack;
+  }
+
+  & svg {
+    fill: $pageBackground;
   }
 }
