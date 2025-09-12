@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import photo from 'assets/20231013_161555crop-480x480.jpg';
 import styles from './index.module.scss';
+import ButtonLink from 'components/ButtonLink';
 
 const Representation = () => {
   const { t } = useTranslation();
@@ -21,9 +22,7 @@ const Representation = () => {
           <p>{t('representation.text4')}</p>
           <p>{t('representation.text5')}</p>
           <p>{t('representation.text6')}</p>
-          <a href="#">
-            <span>{t('representation.moreAbout')}</span>
-          </a>
+          <ButtonLink title={t('representation.moreAbout')} link="#" />
         </div>
       </div>
     </section>
