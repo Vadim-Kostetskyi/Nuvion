@@ -19,16 +19,6 @@ export type Attribute = {
 } & AttributeValue &
   Attributes;
 
-export interface Product {
-  title: string;
-  slug: string;
-  date: string;
-  image: string;
-  work_performed: string;
-  address: string;
-  description: string;
-}
-
 export interface GetProductsResponse {
   products: Product[];
   pages?: number;
@@ -66,4 +56,22 @@ export interface ServicePoint {
 export interface PlaceOrderRequest {
   items: { productId: string; quantity: number }[];
   totalPrice: number;
+}
+
+//new
+
+export interface Product {
+  id: number;
+  title: string;
+  slug: string;
+  date: string;
+  image: string;
+  work_performed: string;
+  address: string;
+  description: string;
+}
+
+export interface SaveProductArg {
+  formData: FormData;
+  id?: number;
 }

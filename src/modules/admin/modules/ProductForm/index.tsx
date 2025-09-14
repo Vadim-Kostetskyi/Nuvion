@@ -3,54 +3,16 @@ import styles from './index.module.scss';
 import { formList } from './data';
 import { useTranslation } from 'react-i18next';
 import slugify from 'slugify';
+import { useSaveProductMutation } from 'storeRedux/slyse/productsApi';
 
 interface ProductFormProps {
   product?: any;
   onClose: () => void;
 }
 
-async function createProduct(formData: FormData) {
-  const response = await fetch(
-    'http://localhost/Nuvion-data-base/api/v1/archive/products',
-    { method: 'POST', body: formData }
-  );
-  if (!response.ok) {
-    const errorData = await response.json();
-    throw new Error(errorData.error || 'Failed to create product');
-  }
-  return response.json();
-}
-
-// async function updateProduct(id: number, formData: FormData) {
-//   const response = await fetch(
-//     `http://localhost/Nuvion-data-base/api/v1/archive/products/${id}`,
-//     { method: 'POST', body: formData }
-//   );
-
-//   if (!response.ok) {
-//     const errorData = await response.json();
-//     throw new Error(errorData.error || 'Failed to update product');
-//   }
-//   return response.json();
-// }
-async function updateProduct(id: number, formData: FormData) {
-  const response = await fetch(
-    `http://localhost/Nuvion-data-base/api/v1/archive/products/${id}`,
-    { method: 'POST', body: formData }
-  );
-
-  const text = await response.text(); // читаємо як текст
-  try {
-    const data = JSON.parse(text); // пробуємо парсити JSON
-    if (!response.ok) throw new Error(data.error || 'Failed to update product');
-    return data;
-  } catch {
-    // Якщо не JSON — викидаємо текст як помилку
-    throw new Error(`Server returned invalid JSON: ${text}`);
-  }
-}
-
 const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
+  const [saveProduct] = useSaveProductMutation();
+
   const { t } = useTranslation();
 
   const [imageFile, setImageFile] = useState<File | null>(null);
@@ -83,21 +45,21 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
     }
 
     try {
-      let result;
       if (product && product.id) {
         console.log(123);
 
-        // оновлення
-        result = await updateProduct(product.id, formData);
-        alert(`Product updated with ID: ${result.id}`);
+        // create
+        const data = await saveProduct({ formData, id: product?.id }).unwrap();
+
+        alert(`Product ${product ? 'updated' : 'created'} with ID: ${data.id}`);
       } else {
-        // створення
+        // update
         if (!imageFile) {
           alert('Please select an image');
           return;
         }
-        result = await createProduct(formData);
-        alert(`Product created with ID: ${result.id}`);
+        const data = await saveProduct({ formData }).unwrap();
+        alert(`Product created with ID: ${data.id}`);
       }
       onClose();
     } catch (err: any) {

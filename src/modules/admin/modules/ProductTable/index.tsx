@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
+  useDeleteProductMutation,
   useGetProductsQuery,
-  // useDeleteProductMutation,
 } from 'storeRedux/slyse/productsApi';
 import pludImage from 'assets/icons/plus.png';
 import ProductForm from 'modules/admin/modules/ProductForm';
@@ -14,7 +14,8 @@ const ProjectsTable: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingProduct, setEditingProduct] = useState<any>(null); // зберігаємо продукт для редагування
   const { data } = useGetProductsQuery();
-  // const [deleteProduct] = useDeleteProductMutation();
+  const [deleteProduct] = useDeleteProductMutation();
+
   const { t } = useTranslation();
 
   const onOpenModal = (product?: any) => {
@@ -26,13 +27,15 @@ const ProjectsTable: React.FC = () => {
     setIsModalOpen(false);
   };
 
-  const handleDelete = async (id: number) => {
-    if (window.confirm(t('products.confirmDelete'))) {
-      try {
-        // await deleteProduct(id).unwrap();
-      } catch (error) {
-        console.error(error);
-      }
+  const handleDeleteProduct = async (id: number, title: string) => {
+    if (!window.confirm(`Delete product "${title}"?`)) return;
+
+    try {
+      await deleteProduct(id).unwrap();
+      alert(`Product "${title}" deleted`);
+    } catch (err: any) {
+      console.error(err);
+      alert(`Failed to delete product: ${err.message || err}`);
     }
   };
 
@@ -82,7 +85,7 @@ const ProjectsTable: React.FC = () => {
                     </button>
                     <button
                       className={styles.deleteBtn}
-                      // onClick={() => handleDelete(item.id)}
+                      onClick={() => handleDeleteProduct(item.id, item.title)}
                     >
                       <img src={backedImage} alt="delete" />
                     </button>

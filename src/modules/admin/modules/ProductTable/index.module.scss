@@ -2,16 +2,16 @@
 
 .tableContainer {
   padding: 16px;
-  overflow-x: auto;
 }
 
 .addItemBtn {
   position: fixed;
   right: 55px;
-  top: 100px;
+  top: 4px;
+  z-index: 100000;
 
   & img {
-    width: 80px;
+    width: 60px;
   }
 }
 

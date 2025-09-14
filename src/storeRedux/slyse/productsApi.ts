@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { BASE_URL } from '../routes';
-import { Product } from '../types';
+import { Product, SaveProductArg } from '../types';
 
 export const productsApi = createApi({
   reducerPath: 'productsApi',
@@ -8,29 +8,41 @@ export const productsApi = createApi({
     baseUrl: BASE_URL,
     prepareHeaders: (headers) => {
       const token = import.meta.env.VITE_API_KEY;
-      if (token) {
-        headers.set('Authorization', `Bearer ${token}`);
-      }
+      if (token) headers.set('Authorization', `Bearer ${token}`);
       return headers;
     },
   }),
+  tagTypes: ['Product'],
   endpoints: (builder) => ({
     getProducts: builder.query<Product[], void>({
       query: () => `archive/products/`,
-      transformResponse: (response: Product[]) =>
-        response.map((product) => ({
-          ...product,
-        })),
+      providesTags: ['Product'],
     }),
     getLaatsteProducts: builder.query<Product[], void>({
       query: () => `archive/products/laatste`,
-      transformResponse: (response: Product[]) =>
-        response.map((product) => ({
-          ...product,
-        })),
+      providesTags: ['Product'],
+    }),
+    saveProduct: builder.mutation<Product, SaveProductArg>({
+      query: ({ formData, id }) => ({
+        url: id ? `archive/products/${id}` : 'archive/products',
+        method: 'POST',
+        body: formData, // <- тільки FormData
+      }),
+      invalidatesTags: ['Product'],
+    }),
+    deleteProduct: builder.mutation<{ success: boolean; id: number }, number>({
+      query: (id) => ({
+        url: `archive/products/${id}`,
+        method: 'DELETE',
+      }),
+      invalidatesTags: ['Product'],
     }),
   }),
-  tagTypes: ['Product'],
 });
 
-export const { useGetProductsQuery, useGetLaatsteProductsQuery } = productsApi;
+export const {
+  useGetProductsQuery,
+  useGetLaatsteProductsQuery,
+  useSaveProductMutation,
+  useDeleteProductMutation,
+} = productsApi;
