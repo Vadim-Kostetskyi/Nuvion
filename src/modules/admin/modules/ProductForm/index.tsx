@@ -21,17 +21,33 @@ async function createProduct(formData: FormData) {
   return response.json();
 }
 
+// async function updateProduct(id: number, formData: FormData) {
+//   const response = await fetch(
+//     `http://localhost/Nuvion-data-base/api/v1/archive/products/${id}`,
+//     { method: 'POST', body: formData }
+//   );
+
+//   if (!response.ok) {
+//     const errorData = await response.json();
+//     throw new Error(errorData.error || 'Failed to update product');
+//   }
+//   return response.json();
+// }
 async function updateProduct(id: number, formData: FormData) {
   const response = await fetch(
     `http://localhost/Nuvion-data-base/api/v1/archive/products/${id}`,
     { method: 'POST', body: formData }
   );
 
-  if (!response.ok) {
-    const errorData = await response.json();
-    throw new Error(errorData.error || 'Failed to update product');
+  const text = await response.text(); // читаємо як текст
+  try {
+    const data = JSON.parse(text); // пробуємо парсити JSON
+    if (!response.ok) throw new Error(data.error || 'Failed to update product');
+    return data;
+  } catch {
+    // Якщо не JSON — викидаємо текст як помилку
+    throw new Error(`Server returned invalid JSON: ${text}`);
   }
-  return response.json();
 }
 
 const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {

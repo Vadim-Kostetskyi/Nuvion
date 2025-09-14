@@ -53,7 +53,7 @@ const ProjectsTable: React.FC = () => {
             <th>{t('products.work_performed')}</th>
             <th>{t('products.address')}</th>
             <th>{t('products.description')}</th>
-            <th>{t('products.actions')}</th> {/* новий стовпець */}
+            <th>{t('products.actions')}</th>
           </tr>
         </thead>
         <tbody>
