@@ -65,7 +65,8 @@
     "address": "Address",
     "description": "Description",
     "create": "Create",
-    "edit": "Save changes"
+    "edit": "Save changes",
+    "actions": "Actions"
   },
   "address": "Platinaweg 25, 2544 EZ, The Hague",
   "copyright": "Copyright Nuvion™ 2025 ©",

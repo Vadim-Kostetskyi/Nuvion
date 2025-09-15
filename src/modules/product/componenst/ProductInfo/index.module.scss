@@ -1,0 +1,14 @@
+@use 'styles/bootstrap' as *;
+
+.info {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: capitalize;
+  padding: 5px;
+
+  & img {
+    margin-right: 10px;
+  }
+}

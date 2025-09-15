@@ -9,10 +9,11 @@ import ProductForm from 'modules/admin/modules/ProductForm';
 import backedImage from 'assets/svg/Backed.svg';
 import editImage from 'assets/svg/edit.svg';
 import styles from './index.module.scss';
+import { tablTiltes } from './data';
 
 const ProjectsTable: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [editingProduct, setEditingProduct] = useState<any>(null); // зберігаємо продукт для редагування
+  const [editingProduct, setEditingProduct] = useState<any>(null);
   const { data } = useGetProductsQuery();
   const [deleteProduct] = useDeleteProductMutation();
 
@@ -50,13 +51,9 @@ const ProjectsTable: React.FC = () => {
       <table className={styles.table}>
         <thead>
           <tr>
-            <th>{t('products.title')}</th>
-            <th>{t('products.dateCompletion')}</th>
-            <th>{t('products.image')}</th>
-            <th>{t('products.work_performed')}</th>
-            <th>{t('products.address')}</th>
-            <th>{t('products.description')}</th>
-            <th>{t('products.actions')}</th>
+            {tablTiltes.map(({ title }) => (
+              <th key={title}>{t(`products.${title}`)}</th>
+            ))}
           </tr>
         </thead>
         <tbody>
@@ -67,7 +64,7 @@ const ProjectsTable: React.FC = () => {
                 <td>{item.date}</td>
                 <td>
                   <img
-                    src={`http://localhost/Nuvion-data-base${item.image}`}
+                    src={item.image}
                     alt={item.title}
                     className={styles.image}
                   />

@@ -65,7 +65,8 @@
     "address": "Adres",
     "description": "Beschrijving",
     "create": "Aanmaken",
-    "edit": "Wijzigingen opslaan"
+    "edit": "Wijzigingen opslaan",
+    "actions": "Acties"
   },
   "address": "Platinaweg 25, 2544 EZ, Den Haag",
   "copyright": "Copyright Nuvion™  2025 ©",

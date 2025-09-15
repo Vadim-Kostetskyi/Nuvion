@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { BASE_URL } from '../routes';
+import { BASE_URL, BASE_URL_IMAGE } from '../routes';
 import { Product, SaveProductArg } from '../types';
 
 export const productsApi = createApi({
@@ -16,17 +16,38 @@ export const productsApi = createApi({
   endpoints: (builder) => ({
     getProducts: builder.query<Product[], void>({
       query: () => `archive/products/`,
+      transformResponse: (response: Product[]) =>
+        response.map((item) => ({
+          ...item,
+          image: item.image ? `${BASE_URL_IMAGE}${item.image}` : item.image,
+        })),
       providesTags: ['Product'],
     }),
+
     getLaatsteProducts: builder.query<Product[], void>({
       query: () => `archive/products/laatste`,
+      transformResponse: (response: Product[]) =>
+        response.map((item) => ({
+          ...item,
+          image: item.image ? `${BASE_URL_IMAGE}${item.image}` : item.image,
+        })),
       providesTags: ['Product'],
     }),
+
+    getProductBySlug: builder.query<Product, string>({
+      query: (slug) => `archive/products/${slug}`,
+      transformResponse: (item: Product) => ({
+        ...item,
+        image: item.image ? `${BASE_URL_IMAGE}${item.image}` : item.image,
+      }),
+      providesTags: ['Product'],
+    }),
+
     saveProduct: builder.mutation<Product, SaveProductArg>({
       query: ({ formData, id }) => ({
         url: id ? `archive/products/${id}` : 'archive/products',
         method: 'POST',
-        body: formData, // <- тільки FormData
+        body: formData,
       }),
       invalidatesTags: ['Product'],
     }),
@@ -43,6 +64,7 @@ export const productsApi = createApi({
 export const {
   useGetProductsQuery,
   useGetLaatsteProductsQuery,
+  useGetProductBySlugQuery,
   useSaveProductMutation,
   useDeleteProductMutation,
 } = productsApi;

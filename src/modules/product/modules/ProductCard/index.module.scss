@@ -1,0 +1,166 @@
+@use 'styles/bootstrap' as *;
+
+.productCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 100px;
+  padding: 30px 0;
+
+  // @include media(laptop) {
+  //   display: flex;
+  //   align-items: flex-start;
+  // }
+
+  & h1 {
+    font-size: 32px;
+  }
+}
+
+.image {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 15px;
+  height: auto;
+  object-fit: contain;
+
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  &.loaded {
+    opacity: 1;
+  }
+
+  @include media(laptop) {
+    width: 45%;
+  }
+}
+
+.infoBox {
+  & > :not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  & img,
+  & svg {
+    width: 20px;
+  }
+
+  // @include media(laptop) {
+  //   width: 55%;
+  //   padding-left: 30px;
+  // }
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  @include media(laptop) {
+    font-size: 48px;
+  }
+}
+
+.price {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.quantity {
+  font-weight: 700;
+}
+
+.inStock {
+  display: flex;
+  align-items: center;
+  // color: $limeGreen;
+
+  &:before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 6px;
+    height: 6px;
+    margin-right: 6px;
+    border-radius: 50%;
+    // background-color: $limeGreen;
+  }
+  margin-bottom: 15px;
+}
+
+.outStock {
+  display: flex;
+  align-items: center;
+  // color: $customRed;
+
+  &:before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 6px;
+    height: 6px;
+    margin-right: 6px;
+    border-radius: 50%;
+    // background-color: $customRed;
+  }
+
+  margin-bottom: 15px;
+}
+
+.quantityBox {
+  display: flex;
+  align-items: center;
+
+  & input {
+    position: relative;
+    width: 55px;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    // border-bottom: 1px solid $coralPink;
+    // background-color: $softBlush;
+
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  & button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    // background-color: $softBlush;
+  }
+  margin-bottom: 40px;
+}
+
+.description {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.descriptionText {
+  & p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  & strong {
+    font-weight: 800;
+  }
+}
+
+.enable {
+  cursor: pointer;
+}
+
+.disable {
+  cursor: no-drop;
+}
