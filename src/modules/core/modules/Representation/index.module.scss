@@ -11,7 +11,7 @@
     width: $max-content-width;
     margin: auto;
 
-    & > div {
+    & > div:first-child {
       width: calc((100% / 3) - 15px);
     }
   }
@@ -55,5 +55,13 @@
 
   & img {
     height: 100%;
+  }
+}
+
+.textBox {
+  & > div {
+    display: flex;
+    width: 100%;
+    gap: 65px;
   }
 }

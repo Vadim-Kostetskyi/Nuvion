@@ -12,17 +12,18 @@ const Representation = () => {
         <div className={styles.imageWrapper}>
           <img src={photo} alt="" />
         </div>
-        <div>
+        <div className={styles.textBox}>
           <h2>{t('representation.title')}</h2>
-          <strong>{t('representation.text1')}</strong>
-          <p>{t('representation.text2')}</p>
-          <p>{t('representation.text3')}</p>
-        </div>
-        <div>
-          <p>{t('representation.text4')}</p>
-          <p>{t('representation.text5')}</p>
-          <p>{t('representation.text6')}</p>
-          <ButtonLink title={t('representation.moreAbout')} link="#" />
+          <div>
+            <div>
+              <strong>{t('representation.text1')}</strong>
+            </div>
+            <div>
+              <p>{t('representation.text2')}</p>
+              <p>{t('representation.text3')}</p>
+              <ButtonLink title={t('representation.moreAbout')} link="#" />
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -23,12 +23,12 @@ export const useFormProps = () => {
       type: 'text',
       require: true,
     },
-    {
-      title: t('feedBack.lastName'),
-      name: nameProps.lastName,
-      type: 'text',
-      require: true,
-    },
+    // {
+    //   title: t('feedBack.lastName'),
+    //   name: nameProps.lastName,
+    //   type: 'text',
+    //   require: true,
+    // },
     {
       title: t('feedBack.email'),
       name: nameProps.email,

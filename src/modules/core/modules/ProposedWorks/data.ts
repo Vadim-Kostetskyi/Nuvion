@@ -3,7 +3,7 @@
 // import icon3 from 'assets/works/icoon_gereedschap-hamer_onderhoud-300x300.png';
 // import icon4 from 'assets/works/icoon_kerkje_grachtenpand_restauratie-300x300.png';
 
-import icon5 from 'assets/works/renovation.jpg';
+import icon5 from 'assets/works/renovation.png';
 import icon6 from 'assets/works/maintenance.jpg';
 
 export const proposedWorksList = [

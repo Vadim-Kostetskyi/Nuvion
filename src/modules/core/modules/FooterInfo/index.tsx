@@ -12,7 +12,7 @@ const FooterInfo = () => {
   return (
     <div className={styles.footerInfo}>
       <div>
-        <Social />
+        {/* <Social /> */}
         <div>
           <h3>{companyName}</h3>
           {links.map(({ label }) => (

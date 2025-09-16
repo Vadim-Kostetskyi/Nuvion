@@ -13,7 +13,7 @@
   },
   "feedBack": {
     "contactUs": "Kontakt oss",
-    "name": "Fornavn",
+    "name": "Voornaam en achternaam",
     "lastName": "Etternavn",
     "phoneNumber": "Telefonnummer",
     "email": "E-postadresse",
@@ -36,22 +36,19 @@
     "newConstructionDesc": "Iets nieuws laten bouwen? We denken graag met u mee over nieuw- of verbouw zodat u weer jaren vooruit kunt."
   },
   "representation": {
-    "title": "Even voorstellen",
-    "text1": " Witte Bouw is al decennialang gespecialiseerd in gebouw onderhoud, restaureren, bouwen en renoveren van kleinere panden tot (rijks-)monumenten in Amsterdam en omstreken.",
-    "text2": "Kwaliteit en vakkennis staat daarbij altijd op de eerste plaats. Wij behoren tot een selecte groep experts die het certificaat ‘Erkend Restauratie Bouwbedrijf’ mogen voeren en hebben al talloze monumentale gebouwen onder handen genomen.",
-    "text3": "Onze opdrachtgevers zijn uiteenlopend. Van VvE’s, tot (semi-)overheidsinstellingen, woningbouwcorporaties, beleggers, beheerders van scholen, bedrijven of particulieren.",
-    "text4": " Ook werken we vaak in opdracht van architectenbureaus, constructeurs of stedenbouwkundigen.",
-    "text5": "We doen meer dan alleen mooie bouwprojecten uitvoeren. Onze medewerkers hebben liefde voor het vak en oog voor detail. We bouwen op elkaar en lachen veel, creëren oplossingen en zijn proactieve meedenkers. We maken realistische plannen, heldere kostenopgaves en communiceren graag duidelijk.",
-    "text6": "Wilt u meer weten over ons bedrijf? Klik dan op de button hieronder.",
+    "title": "Laten we kennis maken!",
+    "text1": "Het bedrijf Nuvion is al 9 jaar uw betrouwbare partner in Nederland en is gespecialiseerd in uitgebreid onderhoud, restauratie en renovatie van projecten van elke omvang – van gezellige particuliere woningen en bijgebouwen tot moderne commerciële ruimtes. Onze prioriteiten zijn altijd oncompromisende kwaliteit, diepgaande professionele kennis en aandacht voor elk detail – daarom zijn we trots op de vele succesvol afgeronde projecten voor uiteenlopende opdrachtgevers.",
+    "text2": "We doen veel meer dan alleen bouwwerkzaamheden uitvoeren: onze medewerkers hebben een oprechte passie voor hun vak en weten oplossingen te vinden waar anderen het opgeven. We steunen elkaar, staan altijd open voor dialoog, dragen nuttige ideeën aan en zijn bereiden om een proactieve partner te zijn in elke fase van de samenwerking. Voor ons zijn duidelijkheid en vertrouwen belangrijk – daarom stellen we realistische plannen op, bieden we volledig transparante offertes en communiceren we altijd eerlijk met alle opdrachtgevers.",
+    "text3": "Wilt u meer weten over hoe wij u specifiek kunnen helpen? Klik eenvoudig op de onderstaande knop – wij beantwoorden graag al uw vragen en bieden u de best passende oplossing.",
     "moreAbout": "Meer over Nuvion"
   },
   "prescription": {
-    "text1": "Experts in restauratie, renovatie en onderhoud sinds 1932",
-    "text2": "Proactief, oplossingsgericht & realistisch",
-    "text3": "Ervaren medewerkers door vakkennis & opleiding",
-    "text4": "Hoge klanttevredenheid volgens bouwnu.nl",
-    "text5": "Innovatief & gericht op de toekomst",
-    "text6": "Vriendelijke en zorgvuldige communicatie"
+    "text1": "Experts in restauratie, renovatie en onderhoud met een frisse blik",
+    "text2": "Toekomstgericht, innovatief & altijd oplossingsgericht",
+    "text3": "Gedreven medewerkers door continue ontwikkeling en vakmanschap",
+    "text4": "Uitzonderijke klanttevredenheid door persoonlijke aandacht",
+    "text5": "Moderne technieken met oog voor duurzaamheid",
+    "text6": "Heldere en toegankelijke communicatie, altijd oprecht"
   },
   "contact": {
     "contactDetails": "Contactgegevens",

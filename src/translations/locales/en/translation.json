@@ -13,7 +13,7 @@
   },
   "feedBack": {
     "contactUs": "Contact Us",
-    "name": "First Name",
+    "name": "First name and last name",
     "lastName": "Last Name",
     "phoneNumber": "Phone Number",
     "email": "Email Address",
@@ -36,22 +36,19 @@
     "newConstructionDesc": "Want to build something new? We are happy to assist with new construction or remodeling so you can enjoy it for years."
   },
   "representation": {
-    "title": "Let us introduce ourselves",
-    "text1": "Witte Bouw has been specializing for decades in building maintenance, restoration, construction, and renovation — from small properties to (national) monuments in Amsterdam and the surrounding areas.",
-    "text2": "Quality and expertise always come first. We belong to a select group of experts certified as a 'Recognized Restoration Construction Company' and have worked on numerous historic buildings.",
-    "text3": "Our clients are diverse: from homeowners’ associations (VvEs) to (semi-)government institutions, housing corporations, investors, school managers, companies, or private individuals.",
-    "text4": "We also often work on behalf of architectural firms, structural engineers, or urban planners.",
-    "text5": "We do more than just execute beautiful construction projects. Our employees are passionate about their craft and attentive to detail. We support each other, laugh a lot, create solutions, and proactively contribute ideas. We make realistic plans, provide clear cost estimates, and communicate transparently.",
-    "text6": "Want to know more about our company? Click the button below.",
+    "title": "Let’s get acquainted!",
+    "text1": "For 9 years, Nuvion has been your reliable partner in the Netherlands, specializing in comprehensive maintenance, restoration, and renovation of projects of any scale – from cozy private homes and outbuildings to modern commercial spaces. Our priorities are always uncompromising quality, deep professional expertise, and attention to every detail – that’s why we are proud of the many successfully completed projects for a wide variety of clients.",
+    "text2": "We do much more than just carry out construction work: our employees have a genuine passion for their craft and know how to find solutions where others give up. We support each other, are always open to dialogue, contribute useful ideas, and are ready to be a proactive partner at every stage of cooperation. For us, clarity and trust are essential – that’s why we create realistic plans, provide fully transparent estimates, and always communicate honestly with all clients.",
+    "text3": "Would you like to learn more about how we can help you specifically? Simply click the button below – we will be happy to answer all your questions and provide you with the most suitable solution.",
     "moreAbout": "More about Nuvion"
   },
   "prescription": {
-    "text1": "Experts in restoration, renovation, and maintenance since 1932",
-    "text2": "Proactive, solution-oriented & realistic",
-    "text3": "Experienced staff through expertise & training",
-    "text4": "High customer satisfaction according to bouwnu.nl",
-    "text5": "Innovative & future-focused",
-    "text6": "Friendly and attentive communication"
+    "text1": "Experts in restoration, renovation and maintenance with a fresh perspective",
+    "text2": "Future-oriented, innovative & always solution-driven",
+    "text3": "Dedicated employees through continuous development and craftsmanship",
+    "text4": "Exceptional customer satisfaction through personal attention",
+    "text5": "Modern techniques with a focus on sustainability",
+    "text6": "Clear and accessible communication, always sincere"
   },
   "contact": {
     "contactDetails": "Contact details",
