@@ -32,6 +32,16 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
     setFormState((prev: any) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  const handleChangeLang = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormState((prev: any) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -90,6 +100,14 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
             value={formState.date || ''}
             onChange={handleChange}
           />
+          <select
+            name="language"
+            value={formState.language}
+            onChange={handleChangeLang}
+          >
+            <option value="nl">{t('dutchLang')}</option>
+            <option value="en">{t('englishLang')}</option>
+          </select>
           <input
             type="file"
             accept="image/*"

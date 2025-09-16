@@ -66,8 +66,9 @@ export interface Product {
   slug: string;
   date: string;
   image: string;
-  work_performed: string;
-  address: string;
+  work_performed?: string;
+  address?: string;
+  language: string;
   description: string;
 }
 

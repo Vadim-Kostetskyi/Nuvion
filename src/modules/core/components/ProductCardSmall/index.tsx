@@ -2,12 +2,15 @@ import { FC } from 'react';
 import styles from './index.module.scss';
 
 interface ProductCardSmall {
-  image: string;
+  id: number;
   title: string;
+  slug: string;
   date: string;
-  // workPerformed: string;
-  // address: string;
-  description: string[];
+  image: string;
+  work_performed?: string;
+  address?: string;
+  language: string;
+  description: string;
   latest?: boolean;
 }
 

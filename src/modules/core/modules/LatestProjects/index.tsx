@@ -19,12 +19,15 @@ const LatestProjects = () => {
           </p>
         </div> */}
         <div className={styles.products}>
-          {products
+          {/* {products
             .slice(-4)
             .reverse()
             .map((props, index) => (
               <ProductCardSmall {...props} latest={true} key={index} />
-            ))}
+            ))} */}
+          {data?.map((props, index) => (
+            <ProductCardSmall {...props} latest={true} key={index} />
+          ))}
         </div>
       </div>
       <ButtonLink title="Alle projecten" link="#" />
