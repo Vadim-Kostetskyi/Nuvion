@@ -6,7 +6,7 @@ import {
 } from 'storeRedux/slyse/productsApi';
 import pludImage from 'assets/icons/plus.png';
 import ProductForm from 'modules/admin/modules/ProductForm';
-import backedImage from 'assets/svg/Backed.svg';
+import backedImage from 'assets/svg/backed.svg';
 import editImage from 'assets/svg/edit.svg';
 import styles from './index.module.scss';
 import { tablTiltes } from './data';
