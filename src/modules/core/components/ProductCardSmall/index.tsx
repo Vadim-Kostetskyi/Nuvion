@@ -28,7 +28,7 @@ const ProductCardSmall: FC<ProductCardSmall> = ({
       <div>
         <h3>{title}</h3>
         <p>{date}</p>
-        <div className={styles.line}></div>
+        {/* <div className={styles.line}></div> */}
         <p>{description}</p>
       </div>
     </div>

@@ -10,22 +10,24 @@ const LatestProjects = () => {
 
   return (
     <section className={styles.latestProjects}>
+      <h2>Laatste projecten</h2>
       <div>
-        <h2>Laatste projecten</h2>
-        <p>
-          Ontdek meer over onze projecten en mooie werken in Noord- en Zuid
-          Holland.
-        </p>
-        <ButtonLink title="Alle projecten" link="#" />
+        {/* <div>
+          <p>
+            Ontdek meer over onze projecten en mooie werken in Noord- en Zuid
+            Holland.
+          </p>
+        </div> */}
+        <div className={styles.products}>
+          {products
+            .slice(-4)
+            .reverse()
+            .map((props, index) => (
+              <ProductCardSmall {...props} latest={true} key={index} />
+            ))}
+        </div>
       </div>
-      <div className={styles.products}>
-        {products
-          .slice(-4)
-          .reverse()
-          .map((props, index) => (
-            <ProductCardSmall {...props} latest={true} key={index} />
-          ))}
-      </div>
+      <ButtonLink title="Alle projecten" link="#" />
     </section>
   );
 };

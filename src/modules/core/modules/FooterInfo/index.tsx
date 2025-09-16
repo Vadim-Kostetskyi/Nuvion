@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import Contacts from '../Contacts';
-import Social from '../Social';
+// import Social from '../Social';
 import Copyright from '../Copyright';
 import { links } from './data';
 import { companyName } from 'utils/constants';
