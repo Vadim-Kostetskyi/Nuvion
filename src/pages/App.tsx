@@ -2,25 +2,54 @@ import { Route, Routes, Navigate, Outlet } from 'react-router-dom';
 import HomePage from './HomePage';
 import AdminPage from './AdminPage/insex';
 import ProductPage from './ProductPage';
+import LoginPage from './LoginPage';
+import PrivateRoute from 'storeRedux/PrivateRoute';
 import 'styles/index.scss';
 
 const App = () => (
   <Routes>
     <Route path="/" element={<HomePage />} />
-    <Route path="/dashboard" element={<AdminPage />} />
+    {/* <Route path="/dashboard" element={<AdminPage />} /> */}
     <Route path="/project/:productSlug" element={<ProductPage />} />
+    <Route path="login" element={<LoginPage />} />
 
     <Route path="/ua" element={<Outlet />}>
       <Route index element={<HomePage />} />
-      <Route path="dashboard" element={<AdminPage />} />
+      {/* <Route path="dashboard" element={<AdminPage />} /> */}
       <Route path="project/:productSlug" element={<ProductPage />} />
+      <Route path="login" element={<LoginPage />} />
+      <Route
+        path="dashboard"
+        element={
+          <PrivateRoute>
+            <AdminPage />
+          </PrivateRoute>
+        }
+      />
     </Route>
 
     <Route path="/en" element={<Outlet />}>
       <Route index element={<HomePage />} />
-      <Route path="dashboard" element={<AdminPage />} />
       <Route path="project/:productSlug" element={<ProductPage />} />
+      <Route path="login" element={<LoginPage />} />
+      <Route
+        path="dashboard"
+        element={
+          <PrivateRoute>
+            <AdminPage />
+          </PrivateRoute>
+        }
+      />
     </Route>
+
+    <Route
+      path="dashboard"
+      element={
+        <PrivateRoute>
+          <AdminPage />
+        </PrivateRoute>
+      }
+    />
 
     {/* 404 → редірект */}
     <Route path="*" element={<Navigate to="/" replace />} />

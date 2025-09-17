@@ -56,8 +56,6 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
 
     try {
       if (product && product.id) {
-        console.log(123);
-
         // create
         const data = await saveProduct({ formData, id: product?.id }).unwrap();
 
