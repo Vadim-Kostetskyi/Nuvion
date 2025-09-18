@@ -6,14 +6,16 @@ import LoginPage from './LoginPage';
 import PrivateRoute from 'storeRedux/PrivateRoute';
 import 'styles/index.scss';
 
+const path = import.meta.env.VITE_ROUTE_PATH;
+
 const App = () => (
   <Routes>
-    <Route path="/" element={<HomePage />} />
+    <Route path={`/${path}`} element={<HomePage />} />
     {/* <Route path="/dashboard" element={<AdminPage />} /> */}
     <Route path="/project/:productSlug" element={<ProductPage />} />
-    <Route path="login" element={<LoginPage />} />
+    <Route path={`/${path}/login`} element={<LoginPage />} />
 
-    <Route path="/ua" element={<Outlet />}>
+    <Route path={`/ua/${path}`} element={<Outlet />}>
       <Route index element={<HomePage />} />
       {/* <Route path="dashboard" element={<AdminPage />} /> */}
       <Route path="project/:productSlug" element={<ProductPage />} />
@@ -28,7 +30,7 @@ const App = () => (
       />
     </Route>
 
-    <Route path="/en" element={<Outlet />}>
+    <Route path={`/en/${path}`} element={<Outlet />}>
       <Route index element={<HomePage />} />
       <Route path="project/:productSlug" element={<ProductPage />} />
       <Route path="login" element={<LoginPage />} />

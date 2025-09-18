@@ -65,6 +65,9 @@
     "edit": "Wijzigingen opslaan",
     "actions": "Acties"
   },
+  "login": {
+    "logInToSystem": "logInToSystem"
+  },
   "englishLang": "Engels",
   "dutchLang": "Nederlands",
   "address": "Platinaweg 25, 2544 EZ, Den Haag",
