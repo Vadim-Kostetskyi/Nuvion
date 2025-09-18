@@ -38,7 +38,10 @@ const ProductCard = () => {
         <h1 className={styles.title}>{title}</h1>
         <div>
           {productInfoList.map(({ image }, index) => (
-            <ProductInfo image={image} text={productInfoListText[index]} />
+            <ProductInfo
+              image={image}
+              text={productInfoListText[index] || ''}
+            />
           ))}
         </div>
         <div className={styles.descriptionText}>

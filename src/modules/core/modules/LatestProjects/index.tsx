@@ -1,36 +1,26 @@
-import { products } from 'products';
+// import { products } from 'products';
 import ProductCardSmall from 'modules/core/components/ProductCardSmall';
 import ButtonLink from 'components/ButtonLink';
 import { useGetLaatsteProductsQuery } from 'storeRedux/slyse/productsApi';
 import styles from './index.module.scss';
+import { useTranslation } from 'react-i18next';
 
 const LatestProjects = () => {
-  const { data } = useGetLaatsteProductsQuery();
-  console.log('3242332434', data);
+  const { data, error } = useGetLaatsteProductsQuery();
+  const { t } = useTranslation();
+  console.log(error);
 
   return (
     <section className={styles.latestProjects}>
-      <h2>Laatste projecten</h2>
+      <h2>{t('projects.latestProjects')}</h2>
       <div>
-        {/* <div>
-          <p>
-            Ontdek meer over onze projecten en mooie werken in Noord- en Zuid
-            Holland.
-          </p>
-        </div> */}
         <div className={styles.products}>
-          {/* {products
-            .slice(-4)
-            .reverse()
-            .map((props, index) => (
-              <ProductCardSmall {...props} latest={true} key={index} />
-            ))} */}
           {data?.map((props, index) => (
             <ProductCardSmall {...props} latest={true} key={index} />
           ))}
         </div>
       </div>
-      <ButtonLink title="Alle projecten" link="#" />
+      <ButtonLink title={t('projects.allProjects')} link="#" />
     </section>
   );
 };

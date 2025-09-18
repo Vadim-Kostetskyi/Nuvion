@@ -1,24 +1,23 @@
-import { JSX, useEffect, useState } from 'react';
+import { JSX, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
+import { useVerifyQuery } from 'storeRedux/slyse/login';
 
 const PrivateRoute = ({ children }: { children: JSX.Element }) => {
-  const [isAuth, setIsAuth] = useState<boolean | null>(null);
+  const token =
+    localStorage.getItem('token') || sessionStorage.getItem('token');
+
+  const { data, isLoading, isError, refetch } = useVerifyQuery(undefined, {
+    skip: !token,
+  });
 
   useEffect(() => {
-    const token =
-      localStorage.getItem('token') || sessionStorage.getItem('token');
-    if (!token) {
-      setIsAuth(false);
-      return;
-    }
-    console.log(token);
+    if (token) refetch();
+  }, [token, refetch]);
 
-    setIsAuth(true);
-  }, []);
-  console.log(isAuth);
+  const path = import.meta.env.VITE_ROUTE_PATH;
 
-  if (isAuth === null) return <div>...</div>;
-  if (!isAuth) return <Navigate to="/login" replace />;
+  if (isLoading) return <div>Завантаження...</div>;
+  if (isError || !data?.success) return <Navigate to={`/${path}/login`} />;
 
   return children;
 };

@@ -23,8 +23,6 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
       setFormState(product);
     }
   }, [product]);
-  console.log(formState);
-  console.log(123);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -50,9 +48,9 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
 
     const title = formData.get('title') as string | null;
     formData.append('slug', slugify(title || '', { lower: true }));
-    for (let [key, value] of formData.entries()) {
-      console.log(key, value);
-    }
+    // for (let [key, value] of formData.entries()) {
+    //   console.log(key, value);
+    // }
 
     try {
       if (product && product.id) {

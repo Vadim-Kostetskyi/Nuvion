@@ -65,6 +65,10 @@
     "edit": "Зберегти зміни",
     "actions": "Дії"
   },
+  "projects": {
+    "latestProjects": "Останні проекти",
+    "allProjects": "Всі проекти"
+  },
   "englishLang": "Англійська ",
   "dutchLang": "Нідерландська",
   "address": "Platinaweg 25, 2544 EZ, Гаага",

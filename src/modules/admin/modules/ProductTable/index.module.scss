@@ -12,12 +12,19 @@
 .addItemBtn {
   position: fixed;
   right: 55px;
-  top: 4px;
+  top: 400px;
   z-index: 100000;
 
   & img {
     width: 60px;
   }
+}
+
+.logout {
+  position: fixed;
+  right: 55px;
+  top: 20px;
+  z-index: 100000;
 }
 
 .table {

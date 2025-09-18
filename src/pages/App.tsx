@@ -4,12 +4,15 @@ import AdminPage from './AdminPage/insex';
 import ProductPage from './ProductPage';
 import LoginPage from './LoginPage';
 import PrivateRoute from 'storeRedux/PrivateRoute';
+import FakeHomePage from './HomePage/fake';
 import 'styles/index.scss';
 
 const path = import.meta.env.VITE_ROUTE_PATH;
 
 const App = () => (
   <Routes>
+    <Route path="/" element={<FakeHomePage />} />
+
     <Route path={`/${path}`} element={<HomePage />} />
     {/* <Route path="/dashboard" element={<AdminPage />} /> */}
     <Route path="/project/:productSlug" element={<ProductPage />} />
@@ -45,7 +48,7 @@ const App = () => (
     </Route>
 
     <Route
-      path="dashboard"
+      path={`/${path}/dashboard`}
       element={
         <PrivateRoute>
           <AdminPage />

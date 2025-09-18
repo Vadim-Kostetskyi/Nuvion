@@ -4,12 +4,13 @@ import {
   useDeleteProductMutation,
   useGetProductsQuery,
 } from 'storeRedux/slyse/productsApi';
-import pludImage from 'assets/icons/plus.png';
 import ProductForm from 'modules/admin/modules/ProductForm';
+import LogoutButton from 'modules/admin/components/LogoutButton';
+import { tablTiltes } from './data';
+import pludImage from 'assets/icons/plus.png';
 import backedImage from 'assets/svg/backed.svg';
 import editImage from 'assets/svg/edit.svg';
 import styles from './index.module.scss';
-import { tablTiltes } from './data';
 
 const ProjectsTable: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -48,6 +49,9 @@ const ProjectsTable: React.FC = () => {
       {isModalOpen && (
         <ProductForm onClose={onCloseModal} product={editingProduct} />
       )}
+      <div className={styles.logout}>
+        <LogoutButton />
+      </div>
       <table className={styles.table}>
         <thead>
           <tr>

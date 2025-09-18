@@ -65,6 +65,10 @@
     "edit": "Save changes",
     "actions": "Actions"
   },
+  "projects": {
+    "latestProjects": "Latest projects",
+    "allProjects": "All projects"
+  },
   "englishLang": "English",
   "dutchLang": "Dutch",
   "address": "Platinaweg 25, 2544 EZ, The Hague",

@@ -25,7 +25,8 @@ export const authApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: BASE_URL,
     prepareHeaders: (headers) => {
-      const token = localStorage.getItem('token'); // беремо токен із localStorage
+      const token =
+        localStorage.getItem('token') || sessionStorage.getItem('token');
       if (token) headers.set('Authorization', `Bearer ${token}`);
       return headers;
     },
@@ -37,6 +38,14 @@ export const authApi = createApi({
         method: 'POST',
         body: credentials,
       }),
+      async onQueryStarted(_, { queryFulfilled }) {
+        try {
+          const { data } = await queryFulfilled;
+          localStorage.setItem('token', data.token);
+        } catch (err) {
+          console.error('Login failed', err);
+        }
+      },
     }),
     register: builder.mutation<LoginResponse, LoginArg>({
       query: (credentials) => ({
@@ -44,6 +53,14 @@ export const authApi = createApi({
         method: 'POST',
         body: credentials,
       }),
+      async onQueryStarted(_, { queryFulfilled }) {
+        try {
+          const { data } = await queryFulfilled;
+          localStorage.setItem('token', data.token);
+        } catch (err) {
+          console.error('Register failed', err);
+        }
+      },
     }),
     verify: builder.query<VerifyResponse, void>({
       query: () => 'auth/verify',
@@ -53,6 +70,14 @@ export const authApi = createApi({
         url: 'auth/logout',
         method: 'DELETE',
       }),
+      async onQueryStarted(_, { queryFulfilled }) {
+        try {
+          await queryFulfilled;
+          localStorage.removeItem('token');
+        } catch (err) {
+          console.error('Logout failed', err);
+        }
+      },
     }),
   }),
 });

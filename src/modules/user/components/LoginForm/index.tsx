@@ -7,15 +7,17 @@ import { useLoginMutation } from 'storeRedux/slyse/login';
 const LoginForm = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const key = import.meta.env.VITE_API_KEY;
 
-  // ✅ правильне використання хука
   const [loginUser, { isLoading, error }] = useLoginMutation();
+
+  const path = import.meta.env.VITE_ROUTE_PATH;
 
   useEffect(() => {
     const token =
       localStorage.getItem('token') || sessionStorage.getItem('token');
     if (token) {
-      navigate('/dashboard');
+      navigate(`/${path}/dashboard`, { replace: true });
     }
   }, [navigate]);
 
@@ -24,24 +26,21 @@ const LoginForm = () => {
 
     const formData = new FormData(event.currentTarget);
     const login = formData.get('username') as string;
-    const password = formData.get('password') as string;
+    const password = (formData.get('password') + key) as string;
     const rememberMe = formData.get('rememberMe') === 'on';
 
     try {
       const data = await loginUser({ login, password }).unwrap();
-      console.log('login', login);
-      console.log('password', password);
 
-      console.log(data);
-
-      // if (data.token) {
-      // if (rememberMe) {
-      // localStorage.setItem('token', data.token);
-      // } else {
-      // sessionStorage.setItem('token', data.token);
-      // }
-      // navigate('/dashboard');
-      // }
+      if (data.token) {
+        if (rememberMe) {
+          localStorage.setItem('token', data.token);
+        } else {
+          sessionStorage.setItem('token', data.token);
+        }
+        // navigate('/dashboard');
+        navigate(`/${path}/dashboard`, { replace: true });
+      }
     } catch (err) {
       console.error('Login failed', err);
     }

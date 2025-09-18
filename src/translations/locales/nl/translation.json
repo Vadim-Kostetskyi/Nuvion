@@ -65,6 +65,10 @@
     "edit": "Wijzigingen opslaan",
     "actions": "Acties"
   },
+  "projects": {
+    "latestProjects": "Laatste projecten",
+    "allProjects": "Alle projecten"
+  },
   "login": {
     "logInToSystem": "logInToSystem"
   },
