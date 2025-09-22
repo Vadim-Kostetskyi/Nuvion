@@ -4,6 +4,11 @@
     "constructionRenovation": "Bouw • Renovatie • BRRR",
     "quality": "We bouwen en renoveren woon- en commerciële ruimtes. Casco of turnkey. Duidelijke SOW, planning en kostencontrole."
   },
+
+  "header": {
+    "portfolio": "Portfolio"
+  },
+
   "footer": {
     "contacts": "Contacten",
     "ourTeam": "Ons team",
@@ -11,6 +16,7 @@
     "orSendEmail": "Of stuur een e-mail",
     "ourAddress": "Ons adres"
   },
+
   "feedBack": {
     "contactUs": "Kontakt oss",
     "name": "Voornaam en achternaam",
@@ -20,10 +26,12 @@
     "message": "Melding",
     "send": "Send"
   },
+
   "toastify": {
     "success": "Meldingen din er sendt. Vi vil kontakte deg så snart som mulig.",
     "error": "Meldingen ble ikke sendt, vennligst kontakt oss via våre kontaktdetaljer."
   },
+
   "proposedWorks": {
     "readMore": "Lees meer",
     "restoration": "Restauratie",
@@ -35,6 +43,7 @@
     "newConstruction": "Nieuwbouw",
     "newConstructionDesc": "Iets nieuws laten bouwen? We denken graag met u mee over nieuw- of verbouw zodat u weer jaren vooruit kunt."
   },
+
   "representation": {
     "title": "Laten we kennis maken!",
     "text1": "Het bedrijf Nuvion is al 9 jaar uw betrouwbare partner in Nederland en is gespecialiseerd in uitgebreid onderhoud, restauratie en renovatie van projecten van elke omvang – van gezellige particuliere woningen en bijgebouwen tot moderne commerciële ruimtes. Onze prioriteiten zijn altijd oncompromisende kwaliteit, diepgaande professionele kennis en aandacht voor elk detail – daarom zijn we trots op de vele succesvol afgeronde projecten voor uiteenlopende opdrachtgevers.",
@@ -42,6 +51,7 @@
     "text3": "Wilt u meer weten over hoe wij u specifiek kunnen helpen? Klik eenvoudig op de onderstaande knop – wij beantwoorden graag al uw vragen en bieden u de best passende oplossing.",
     "moreAbout": "Meer over Nuvion"
   },
+
   "prescription": {
     "text1": "Experts in restauratie, renovatie en onderhoud met een frisse blik",
     "text2": "Toekomstgericht, innovatief & altijd oplossingsgericht",
@@ -50,10 +60,12 @@
     "text5": "Moderne technieken met oog voor duurzaamheid",
     "text6": "Heldere en toegankelijke communicatie, altijd oprecht"
   },
+
   "contact": {
     "contactDetails": "Contactgegevens",
     "pleaseContactUs": "Neem contact op"
   },
+
   "products": {
     "title": "Naam",
     "dateCompletion": "Voltooiingsdatum",
@@ -65,13 +77,22 @@
     "edit": "Wijzigingen opslaan",
     "actions": "Acties"
   },
+
   "projects": {
     "latestProjects": "Laatste projecten",
     "allProjects": "Alle projecten"
   },
+
   "login": {
-    "logInToSystem": "logInToSystem"
+    "login": "Inloggen",
+    "usernameOrEmailAddress": "Gebruikersnaam of e-mailadres",
+    "password": "Wachtwoord",
+    "logInToSystem": "Log in op het systeem",
+    "rememberMe": "Onthoud mij",
+    "loading": "laden",
+    "failed": "Onjuiste gebruikersnaam of wachtwoord"
   },
+
   "englishLang": "Engels",
   "dutchLang": "Nederlands",
   "address": "Platinaweg 25, 2544 EZ, Den Haag",

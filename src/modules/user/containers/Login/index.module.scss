@@ -1,4 +1,4 @@
-@use "styles/bootstrap" as *;
+@use 'styles/bootstrap' as *;
 
 .login {
   display: flex;
@@ -8,7 +8,7 @@
   height: 100vh;
 
   @include media(laptopMedium) {
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 

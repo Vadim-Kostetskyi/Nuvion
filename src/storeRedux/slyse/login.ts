@@ -38,14 +38,6 @@ export const authApi = createApi({
         method: 'POST',
         body: credentials,
       }),
-      async onQueryStarted(_, { queryFulfilled }) {
-        try {
-          const { data } = await queryFulfilled;
-          localStorage.setItem('token', data.token);
-        } catch (err) {
-          console.error('Login failed', err);
-        }
-      },
     }),
     register: builder.mutation<LoginResponse, LoginArg>({
       query: (credentials) => ({
@@ -53,14 +45,6 @@ export const authApi = createApi({
         method: 'POST',
         body: credentials,
       }),
-      async onQueryStarted(_, { queryFulfilled }) {
-        try {
-          const { data } = await queryFulfilled;
-          localStorage.setItem('token', data.token);
-        } catch (err) {
-          console.error('Register failed', err);
-        }
-      },
     }),
     verify: builder.query<VerifyResponse, void>({
       query: () => 'auth/verify',
