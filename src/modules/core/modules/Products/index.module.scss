@@ -2,7 +2,15 @@
 
 .productsWrapper {
   width: 100vw;
+  text-align: center;
+  padding: 80px 0;
   background-color: $whiteSmoke;
+
+  & h1 {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 30px;
+  }
 }
 
 .products {
@@ -13,6 +21,5 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
-    padding: 30px 0 130px;
   }
 }

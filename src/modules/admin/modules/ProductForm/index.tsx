@@ -1,9 +1,9 @@
 import { useState, useEffect, FormEvent } from 'react';
-import styles from './index.module.scss';
-import { formList } from './data';
 import { useTranslation } from 'react-i18next';
 import slugify from 'slugify';
 import { useSaveProductMutation } from 'storeRedux/slyse/productsApi';
+import { formList } from './data';
+import styles from './index.module.scss';
 
 interface ProductFormProps {
   product?: any;
@@ -47,19 +47,22 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
     if (imageFile) formData.append('image', imageFile);
 
     const title = formData.get('title') as string | null;
-    formData.append('slug', slugify(title || '', { lower: true }));
-    // for (let [key, value] of formData.entries()) {
-    //   console.log(key, value);
-    // }
+    if (!product) {
+      formData.append('slug', slugify(title || '', { lower: true }));
+    } else {
+      formData.append('slug', product.slug);
+    }
+
+    for (let [key, value] of formData.entries()) {
+      console.log(key, value);
+    }
 
     try {
       if (product && product.id) {
-        // create
         const data = await saveProduct({ formData, id: product?.id }).unwrap();
 
         alert(`Product ${product ? 'updated' : 'created'} with ID: ${data.id}`);
       } else {
-        // update
         if (!imageFile) {
           alert('Please select an image');
           return;
@@ -70,7 +73,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
       onClose();
     } catch (err: any) {
       console.error(err);
-      alert(`111, ${err.message}` || 'Operation failed');
+      alert(`${err.message}` || 'Operation failed');
     }
   };
 

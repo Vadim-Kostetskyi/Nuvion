@@ -12,15 +12,17 @@ const LatestProjects = () => {
 
   return (
     <section className={styles.latestProjects}>
-      <h2>{t('projects.latestProjects')}</h2>
       <div>
-        <div className={styles.products}>
-          {data?.map((props, index) => (
-            <ProductCardSmall {...props} latest={true} key={index} />
-          ))}
+        <h2>{t('projects.latestProjects')}</h2>
+        <div>
+          <div className={styles.products}>
+            {data?.map((props, index) => (
+              <ProductCardSmall {...props} latest={true} key={index} />
+            ))}
+          </div>
         </div>
+        <ButtonLink title={t('projects.allProjects')} link="#" />
       </div>
-      <ButtonLink title={t('projects.allProjects')} link="#" />
     </section>
   );
 };
