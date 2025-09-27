@@ -8,25 +8,32 @@
   & > div {
     display: flex;
     gap: 15px;
-    width: $max-content-width;
+    max-width: $max-content-width;
     margin: auto;
 
     & > div:first-child {
       width: calc((100% / 3) - 15px);
+      @include media(tablet) {
+        width: auto;
+      }
+    }
+
+    @include media(tablet) {
+      display: block;
     }
   }
 
   & h2 {
     font-size: 32px;
     font-weight: 800;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   & strong,
   & p {
     display: block;
     font-size: 18px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   & a {
@@ -55,6 +62,17 @@
 
   & img {
     height: 100%;
+
+    @include media(tablet) {
+      height: auto;
+    }
+  }
+
+  @include media(tablet) {
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+    margin: auto;
   }
 }
 
@@ -63,5 +81,14 @@
     display: flex;
     width: 100%;
     gap: 65px;
+
+    @include media(mobile) {
+      flex-direction: column;
+      gap: 25px;
+    }
+  }
+
+  @include media(tablet) {
+    padding: 0 50px;
   }
 }
