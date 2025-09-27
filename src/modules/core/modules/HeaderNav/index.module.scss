@@ -1,5 +1,11 @@
 @use 'styles/bootstrap' as *;
 
+.headerNavWrapper {
+  @include media(tablet) {
+    display: none;
+  }
+}
+
 .headerNav {
   display: inline-block;
   margin-right: 25px;

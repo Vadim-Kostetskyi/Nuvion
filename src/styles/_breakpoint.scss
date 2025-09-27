@@ -4,7 +4,7 @@ $mobile: 560px;
 $tabletMedium: 660px;
 // $tabletLargeMin: 641px;
 $tablet: 960px;
-// $laptopMin: 961px;
+$laptopMin: 961px;
 $laptopSmall: 1020px;
 $laptopMedium: 1200px;
 // $laptop: 1280px;
@@ -44,11 +44,11 @@ $max-content-width: 1230px;
     }
   }
 
-  //   @if $breakpoint ==laptop {
-  //     @media only screen and (min-width: $laptopMin) {
-  //       @content;
-  //     }
-  //   }
+  @if $breakpoint ==laptop {
+    @media only screen and (min-width: $laptopMin) {
+      @content;
+    }
+  }
 
   @if $breakpoint ==laptopSmall {
     @media only screen and (max-width: $laptopSmall) {
