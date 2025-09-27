@@ -8,12 +8,11 @@
   background-color: $whiteSmoke;
 
   & > div {
-    width: $max-content-width;
+    max-width: $max-content-width;
     margin: auto;
 
     & > div {
       margin-bottom: 30px;
-      width: 100%;
 
       & p {
         margin-bottom: 15px;
@@ -32,4 +31,8 @@
   flex-wrap: wrap;
   gap: 30px;
   width: 100%;
+
+  @include media(laptopSmall) {
+    flex-direction: column;
+  }
 }

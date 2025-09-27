@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: space-between;
   height: 300px;
-  width: 600px;
   overflow: hidden;
   background-color: $whiteColor;
 
@@ -41,8 +40,11 @@
   }
 
   & > div {
-    // width: calc((100% - 20px) / 2);
     padding: 10px;
+  }
+
+  @include media(laptopSmall) {
+    width: 100%;
   }
 }
 
