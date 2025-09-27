@@ -6,15 +6,8 @@
   justify-content: center;
   height: 500px;
   width: 100vw;
-  // background: radial-gradient(
-  //     1200px 400px at 20% -10%,
-  //     $charcoalBlue,
-  //     transparent
-  //   ),
-  //   linear-gradient(180deg, $deepSpace, $darkSlate);
   background-image: url('assets/banner5.png');
   background-repeat: no-repeat;
-  // background-size: cover; /* заповнив блок */
   background-position: center;
   background-color: $pageBackgroundBlack;
 
@@ -33,5 +26,9 @@
 
   & p {
     color: $slateGray;
+  }
+
+  @include media(tablet) {
+    background-size: cover; /* заповнив блок */
   }
 }
