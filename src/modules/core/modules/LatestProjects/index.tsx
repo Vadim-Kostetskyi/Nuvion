@@ -1,4 +1,3 @@
-// import { products } from 'products';
 import ProductCardSmall from 'modules/core/components/ProductCardSmall';
 import ButtonLink from 'components/ButtonLink';
 import { useGetLaatsteProductsQuery } from 'storeRedux/slyse/productsApi';
@@ -6,9 +5,8 @@ import styles from './index.module.scss';
 import { useTranslation } from 'react-i18next';
 
 const LatestProjects = () => {
-  const { data, error } = useGetLaatsteProductsQuery();
+  const { data } = useGetLaatsteProductsQuery();
   const { t } = useTranslation();
-  console.log(error);
 
   return (
     <section className={styles.latestProjects}>

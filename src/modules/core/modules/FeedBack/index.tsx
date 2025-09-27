@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { nameProps } from 'utils/constants';
 import styles from './index.module.scss';
 import Map from '../Map';
+import { useWindowWidth } from 'utils/windowWidth';
 
 export interface Form {
   name: string;
@@ -23,6 +24,7 @@ const FeedBack = () => {
   const { formProps, titleProps } = useFormProps();
 
   const { t } = useTranslation();
+  const width = useWindowWidth();
 
   const {
     register,
@@ -63,6 +65,7 @@ const FeedBack = () => {
     <section className={styles.feedBack}>
       <h2>{titleProps.title}</h2>
       <div>
+        {width <= 660 ? <Map /> : null}
         <form
           className={styles.form}
           ref={form}
@@ -97,7 +100,7 @@ const FeedBack = () => {
             {isLoading && <div className={styles.loader}></div>}
           </div>
         </form>
-        <Map />
+        {width > 660 ? <Map /> : null}
       </div>
       <ToastContainer />
     </section>

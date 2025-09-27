@@ -12,6 +12,14 @@
     & > * {
       width: calc(50% - 30px);
       flex-shrink: 0;
+
+      @include media(tabletMedium) {
+        width: auto;
+      }
+    }
+
+    @include media(tabletMedium) {
+      display: block;
     }
   }
 
@@ -31,10 +39,22 @@
 
     & > :first-child {
       width: calc(100% - 10px);
+
+      @include media(tabletMedium) {
+        width: 100%;
+      }
     }
 
     & > * {
       width: calc(50% - 10px);
+
+      @include media(tabletMedium) {
+        width: 100%;
+      }
+    }
+
+    @include media(tabletMedium) {
+      display: block;
     }
   }
 

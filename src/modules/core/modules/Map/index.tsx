@@ -2,7 +2,6 @@ import React from 'react';
 import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
 
 const containerStyle = {
-  width: '580px',
   height: '400px',
 };
 
@@ -18,11 +17,7 @@ const Map = () => {
   });
 
   return isLoaded ? (
-    <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={position}
-      zoom={16} // 16? 17?
-    >
+    <GoogleMap mapContainerStyle={containerStyle} center={position} zoom={16}>
       <Marker position={position} />
       <></>
     </GoogleMap>
