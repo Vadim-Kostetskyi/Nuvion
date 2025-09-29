@@ -24,6 +24,10 @@
       margin-bottom: 20px;
     }
   }
+
+  @include media(tablet) {
+    width: 100dvw;
+  }
 }
 
 .products {

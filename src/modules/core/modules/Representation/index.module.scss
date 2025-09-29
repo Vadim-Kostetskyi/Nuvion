@@ -20,6 +20,7 @@
 
     @include media(tablet) {
       display: block;
+      width: 100dvw;
     }
   }
 

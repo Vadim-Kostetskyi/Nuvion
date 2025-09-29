@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import HeaderModal from "../HeaderModal";
+import HeaderModal from 'modules/core/modules/HeaderModal';
 import Menu from 'assets/svg/Menu';
 import styles from './index.module.scss';
 
@@ -15,7 +15,7 @@ const BurgerMenu = () => {
       <button className={styles.menuBtn} onClick={toggle}>
         <Menu />
       </button>
-      {/* {modalIsOpen && <HeaderModal onClose={toggle} />} */}
+      {modalIsOpen && <HeaderModal onClose={toggle} />}
     </>
   );
 };

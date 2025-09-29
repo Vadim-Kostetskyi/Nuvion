@@ -11,6 +11,10 @@
     font-weight: 900;
     margin-bottom: 30px;
   }
+
+  @include media(tablet) {
+    width: 100dvw;
+  }
 }
 
 .products {

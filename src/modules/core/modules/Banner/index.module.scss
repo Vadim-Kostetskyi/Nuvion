@@ -31,4 +31,8 @@
   @include media(tablet) {
     background-size: cover; /* заповнив блок */
   }
+
+  @include media(tablet) {
+    width: 100dvw;
+  }
 }
