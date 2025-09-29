@@ -10,7 +10,9 @@ const Products = () => {
 
   return (
     <div className={styles.productsWrapper}>
-      {/* <h1>Portfolio van onze projecten</h1> */}
+      <div className={styles.titleBox}>
+        <h1>Portfolio van onze projecten</h1>
+      </div>
       <div className={styles.products}>
         <div>
           {Array.isArray(data) &&

@@ -9,12 +9,18 @@
   & h1 {
     font-size: 50px;
     font-weight: 900;
-    margin-bottom: 30px;
   }
 
   @include media(tablet) {
     width: 100dvw;
   }
+}
+
+.titleBox {
+  padding: 80px 0;
+  margin-bottom: 80px;
+  color: $whiteColor;
+  background-color: $pageBackgroundBlack;
 }
 
 .products {
