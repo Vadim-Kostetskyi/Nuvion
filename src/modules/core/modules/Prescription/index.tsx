@@ -10,18 +10,18 @@ const Prescription = () => {
     <section className={styles.prescription}>
       <div>
         {list1.map(({ label }) => (
-          <a href="#" key={label}>
+          <div>
             <img src={icon} alt="" />
             <strong>{t(`prescription.${label}`)}</strong>
-          </a>
+          </div>
         ))}
       </div>
       <div>
         {list2.map(({ label }) => (
-          <a href="#" key={label}>
+          <div>
             <img src={icon} alt="" />
             <strong>{t(`prescription.${label}`)}</strong>
-          </a>
+          </div>
         ))}
       </div>
     </section>

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import styles from './index.module.scss';
 
-interface ProductCardSmall {
+interface ProductCardSmallProps {
   id: number;
   title: string;
   slug: string;
@@ -14,7 +14,7 @@ interface ProductCardSmall {
   latest?: boolean;
 }
 
-const ProductCardSmall: FC<ProductCardSmall> = ({
+const ProductCardSmall: FC<ProductCardSmallProps> = ({
   image,
   title,
   date,
@@ -22,7 +22,8 @@ const ProductCardSmall: FC<ProductCardSmall> = ({
   latest,
 }) => {
   return (
-    <div
+    <a //TODO add link
+      href=""
       className={latest ? styles.productCardLatest : styles.productCardSmall}
     >
       <div>
@@ -33,7 +34,7 @@ const ProductCardSmall: FC<ProductCardSmall> = ({
         <p>{date}</p>
         <p>{description}</p>
       </div>
-    </div>
+    </a>
   );
 };
 
