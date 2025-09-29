@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation } from 'react-router-dom';
 import DropDown from 'modules/core/components/DropDown';
@@ -9,7 +10,11 @@ const langMap: Record<string, string> = {
   // ua: 'UA',
 };
 
-const LanguageSelector = () => {
+interface LanguageSelectorProps {
+  isMobile?: boolean;
+}
+
+const LanguageSelector: FC<LanguageSelectorProps> = ({ isMobile }) => {
   const { i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
@@ -43,7 +48,7 @@ const LanguageSelector = () => {
       title={currentLang}
       list={Object.values(langMap)}
       onChange={handleChange}
-      style={styles.dropDown}
+      style={isMobile ? styles.languageSelectorMobile : styles.languageSelector}
     />
   );
 };

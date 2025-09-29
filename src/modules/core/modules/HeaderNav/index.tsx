@@ -1,20 +1,29 @@
+import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from 'components/LanguageSelector';
 import LangLink from 'utils/LangLink';
 import { links } from './links';
 import styles from './index.module.scss';
 
-const HeaderNav = () => {
+interface HeaderNavProps {
+  isMobile?: boolean;
+}
+
+const HeaderNav: FC<HeaderNavProps> = ({ isMobile }) => {
   const { t } = useTranslation();
 
   return (
-    <div className={styles.headerNavWrapper}>
+    <div
+      className={
+        isMobile ? styles.headerNavWrapperMobile : styles.headerNavWrapper
+      }
+    >
       <nav className={styles.headerNav}>
         {links.map(({ title, link }) => (
           <LangLink to={link}>{t(`header.${title}`)}</LangLink>
         ))}
       </nav>
-      <LanguageSelector />
+      <LanguageSelector isMobile={isMobile} />
     </div>
   );
 };

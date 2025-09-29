@@ -55,6 +55,7 @@
 
     @include media(tabletMedium) {
       display: block;
+      width: 100%;
     }
   }
 
@@ -73,6 +74,10 @@
     margin-bottom: 1rem;
     border-radius: 4px;
     background: $pageBackground;
+  }
+
+  @include media(tabletMedium) {
+    padding-top: 30px;
   }
 }
 

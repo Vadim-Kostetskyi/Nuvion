@@ -1,6 +1,7 @@
 @use 'styles/bootstrap' as *;
 
-.dropDown {
+.languageSelector,
+.languageSelectorMobile {
   width: 60px;
   height: fit-content;
   padding: 8px 12px;
@@ -36,4 +37,8 @@
   background-repeat: no-repeat;
   background-position: right 12px center;
   background-size: 12px 8px;
+}
+
+.languageSelectorMobile {
+  width: 100%;
 }

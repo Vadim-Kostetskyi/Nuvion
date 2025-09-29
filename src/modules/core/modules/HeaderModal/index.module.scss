@@ -1,4 +1,4 @@
-@use "styles/bootstrap" as *;
+@use 'styles/bootstrap' as *;
 
 .headerModal {
   position: fixed;
@@ -13,7 +13,7 @@
   background-color: $whiteColor;
   animation: menuOpen 0.2s ease;
 
-  @include media(laptop){
+  @include media(laptop) {
     display: none;
   }
 }
@@ -21,6 +21,8 @@
 .top {
   display: flex;
   justify-content: center;
+  padding: 17px 0;
+  margin-bottom: 30px;
 }
 
 .logo {
@@ -32,8 +34,8 @@
 .closeBtn {
   position: absolute;
   padding: 5px;
-  right: 15px;
-  top: 9px;
+  right: 11px;
+  top: 25px;
 }
 
 @keyframes menuOpen {
