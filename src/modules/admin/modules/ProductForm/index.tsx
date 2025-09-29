@@ -30,15 +30,15 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
     setFormState((prev: any) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleChangeLang = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormState((prev: any) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  // const handleChangeLang = (
+  //   e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  // ) => {
+  //   const { name, value } = e.target;
+  //   setFormState((prev: any) => ({
+  //     ...prev,
+  //     [name]: value,
+  //   }));
+  // };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -53,9 +53,11 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
       formData.append('slug', product.slug);
     }
 
-    for (let [key, value] of formData.entries()) {
-      console.log(key, value);
-    }
+    formData.append('language', 'nl'); // no English
+
+    // for (let [key, value] of formData.entries()) {
+    //   console.log(key, value);
+    // }
 
     try {
       if (product && product.id) {
@@ -99,14 +101,14 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
             value={formState.date || ''}
             onChange={handleChange}
           />
-          <select
+          {/* <select
             name="language"
             value={formState.language}
             onChange={handleChangeLang}
           >
             <option value="nl">{t('dutchLang')}</option>
             <option value="en">{t('englishLang')}</option>
-          </select>
+          </select> */}
           <input
             type="file"
             accept="image/*"

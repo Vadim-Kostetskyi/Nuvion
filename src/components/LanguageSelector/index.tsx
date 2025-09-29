@@ -6,7 +6,7 @@ import styles from './index.module.scss';
 const langMap: Record<string, string> = {
   nl: 'NL',
   en: 'EN',
-  ua: 'UA',
+  // ua: 'UA',
 };
 
 const LanguageSelector = () => {

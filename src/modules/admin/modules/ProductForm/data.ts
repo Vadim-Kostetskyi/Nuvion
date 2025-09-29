@@ -5,7 +5,7 @@ export const formList = [
   {
     title: 'work_performed',
   },
-  // {
-  //   title: 'address',
-  // },
+  {
+    title: 'address',
+  },
 ];
