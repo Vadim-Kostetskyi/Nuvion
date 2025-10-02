@@ -5,11 +5,12 @@ import styles from './index.module.scss';
 interface ButtonLinkProps {
   title: string;
   link: string;
+  className?: string;
 }
 
-const ButtonLink: FC<ButtonLinkProps> = ({ title, link }) => {
+const ButtonLink: FC<ButtonLinkProps> = ({ title, link, className }) => {
   return (
-    <Link to={link} className={styles.link}>
+    <Link to={link} className={`${styles.link} ${className || ''}`}>
       {title}
     </Link>
   );

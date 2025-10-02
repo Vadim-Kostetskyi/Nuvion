@@ -1,0 +1,272 @@
+@use 'styles/bootstrap' as *;
+
+// Базові стилі
+.aboutUs {
+  background: #f9fafb;
+  color: #1f2937;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  padding-bottom: 3rem;
+}
+
+// Інтро
+.introSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+
+  .title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #111827;
+  }
+
+  .text {
+    margin-top: 1.25rem;
+    font-size: 1.125rem;
+    color: #374151;
+  }
+}
+
+.detailsGrid {
+  max-width: 1200px;
+  margin: 3rem auto 0 auto;
+  display: grid;
+  gap: 1.75rem;
+
+  margin-bottom: 65px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .valueCard {
+    background: #fff;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid #f3f4f6;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon {
+      margin-bottom: 0.75rem;
+      color: #fbbf24;
+    }
+
+    h3 {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #111827;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+      margin: 0;
+      color: #4b5563;
+
+      li {
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+}
+
+// Команда
+.teamSection {
+  max-width: 1200px;
+  margin: 3rem auto 0 auto;
+  padding: 0 1.5rem;
+
+  h2 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  .subtitle {
+    margin-top: 0.5rem;
+    color: #6b7280;
+  }
+}
+
+.teamGrid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.teamCard {
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid #f3f4f6;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .teamInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .avatar {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #111827;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+      color: #6b7280;
+    }
+  }
+
+  .teamDesc {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #4b5563;
+  }
+}
+
+// CTA
+.ctaSection {
+  max-width: 1200px;
+  margin: 3.5rem auto 0 auto;
+  padding: 0 1.5rem;
+
+  .ctaBox {
+    background: #111827;
+    color: #fff;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.75rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .ctaBtn {
+      // background: #fbbf24;
+      color: $whiteColor;
+      // padding: 0.9rem 1.8rem;
+      // border-radius: 0.5rem;
+      // font-weight: 600;
+      // text-decoration: none;
+      // transition: background 0.2s ease;
+
+      // &:hover {
+      //   background: #f59e0b;
+      // }
+    }
+  }
+}
+
+.portfolioSection {
+  width: 100%;
+  background: #f3f4f6;
+  padding: 5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolioCard {
+  max-width: 1200px;
+  width: 100%;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 3rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  }
+
+  .icon {
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  p {
+    color: #4b5563;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  small {
+    color: #6b7280;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .portfolioBtn {
+    margin: auto;
+    // align-self: center;
+    // background: #2563eb;
+    // color: #fff;
+    // padding: 0.75rem 1.5rem;
+    // border-radius: 0.5rem;
+    // font-weight: 600;
+    // text-decoration: none;
+    // transition: background 0.2s ease;
+
+    // &:hover {
+    //   background: #1d4ed8;
+    // }
+  }
+}
