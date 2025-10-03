@@ -5,23 +5,23 @@ import ButtonLink from 'components/ButtonLink';
 import { sections } from './data';
 import styles from './index.module.scss';
 
-const team = [
-  {
-    name: 'Іван Петренко',
-    role: 'Генеральний директор',
-    img: 'https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=800&q=80',
-  },
-  {
-    name: 'Олена Коваль',
-    role: 'Архітектор',
-    img: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80',
-  },
-  {
-    name: 'Михаіл Сидоренко',
-    role: 'Інженер-будівельник',
-    img: 'https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=800&q=80',
-  },
-];
+// const team = [
+//   {
+//     name: 'Іван Петренко',
+//     role: 'Генеральний директор',
+//     img: 'https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=800&q=80',
+//   },
+//   {
+//     name: 'Олена Коваль',
+//     role: 'Архітектор',
+//     img: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80',
+//   },
+//   {
+//     name: 'Михаіл Сидоренко',
+//     role: 'Інженер-будівельник',
+//     img: 'https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=800&q=80',
+//   },
+// ];
 
 const AboutUs = () => {
   const { t } = useTranslation();

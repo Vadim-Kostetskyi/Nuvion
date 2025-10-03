@@ -1,13 +1,13 @@
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import Contacts from '../Contacts';
 // import Social from '../Social';
 import Copyright from '../Copyright';
-import { links } from './data';
-import { companyName } from 'utils/constants';
+// import { links } from './data';
+// import { companyName } from 'utils/constants';
 import styles from './index.module.scss';
 
 const FooterInfo = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <div className={styles.footerInfo}>

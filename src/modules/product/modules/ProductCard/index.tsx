@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 // import { useTranslation } from 'react-i18next';
 import { useGetProductBySlugQuery } from 'storeRedux/slyse/productsApi';
@@ -18,7 +18,7 @@ const ProductCard = () => {
   } = useGetProductBySlugQuery(productSlug || '');
   console.log(product);
 
-  const [loaded, setLoaded] = useState(false);
+  // const [loaded, setLoaded] = useState(false);
 
   // const { t } = useTranslation();
 

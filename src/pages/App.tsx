@@ -63,7 +63,7 @@ const App = () => (
       />
 
       {/* 404 → редірект */}
-      {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   </>
 );
