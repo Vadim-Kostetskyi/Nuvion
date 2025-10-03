@@ -13,17 +13,17 @@ const FooterInfo = () => {
     <div className={styles.footerInfo}>
       <div>
         {/* <Social /> */}
-        <div>
+        {/* <div>
           <h3>{companyName}</h3>
           {links.map(({ label }) => (
             <p key={label}>{t(`footer.${label}`)}</p>
           ))}
-        </div>
-        <div>
-          <Contacts isPhone={true} />
-          <Contacts isEmail={true} />
-          <Contacts isAddress={true} />
-        </div>
+        </div> */}
+        {/* <div> */}
+        <Contacts isPhone={true} />
+        <Contacts isEmail={true} />
+        <Contacts isAddress={true} />
+        {/* </div> */}
       </div>
       <Copyright />
     </div>
