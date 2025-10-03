@@ -3,7 +3,6 @@ import logoutIcon from 'assets/icons/logout-24.png';
 
 const LogoutButton = () => {
   const navigate = useNavigate();
-  const path = import.meta.env.VITE_ROUTE_PATH;
 
   const handleLogout = () => {
     // Видаляємо токен з localStorage і sessionStorage
@@ -15,7 +14,7 @@ const LogoutButton = () => {
     sessionStorage.removeItem('user');
 
     // Перекидуємо на логін
-    navigate(`/${path}/login`, { replace: true });
+    navigate('/login', { replace: true });
   };
 
   return (

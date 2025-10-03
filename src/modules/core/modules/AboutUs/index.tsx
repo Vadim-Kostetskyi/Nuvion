@@ -90,7 +90,7 @@ const AboutUs = () => {
         </motion.div>
       </section>
 
-      <section className={styles.teamSection}>
+      {/* <section className={styles.teamSection}>
         <h2>{t('aboutUs.ourTeam')}</h2>
         <p className={styles.subtitle}>{t('aboutUs.professionalsWho...')}</p>
         <div className={styles.teamGrid}>
@@ -122,7 +122,7 @@ const AboutUs = () => {
             </motion.article>
           ))}
         </div>
-      </section>
+      </section> */}
 
       <section className={styles.ctaSection}>
         <div className={styles.ctaBox}>

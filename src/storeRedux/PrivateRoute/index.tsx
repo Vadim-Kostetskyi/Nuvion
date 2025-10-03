@@ -14,10 +14,10 @@ const PrivateRoute = ({ children }: { children: JSX.Element }) => {
     if (token) refetch();
   }, [token, refetch]);
 
-  const path = import.meta.env.VITE_ROUTE_PATH;
+  // const path = import.meta.env.VITE_ROUTE_PATH;
 
   if (isLoading) return <div>Завантаження...</div>;
-  if (isError || !data?.success) return <Navigate to={`/${path}/login`} />;
+  if (isError || !data?.success) return <Navigate to={'/login'} />;
 
   return children;
 };

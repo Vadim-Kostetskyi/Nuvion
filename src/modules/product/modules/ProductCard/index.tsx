@@ -6,6 +6,7 @@ import { useGetProductBySlugQuery } from 'storeRedux/slyse/productsApi';
 import styles from './index.module.scss';
 import { productInfoList } from './data';
 import ProductInfo from 'modules/product/componenst/ProductInfo';
+import ProductCardGalery from 'modules/product/ProductCardGalery';
 
 const ProductCard = () => {
   const { productSlug } = useParams();
@@ -15,6 +16,7 @@ const ProductCard = () => {
     isLoading,
     isError,
   } = useGetProductBySlugQuery(productSlug || '');
+  console.log(product);
 
   const [loaded, setLoaded] = useState(false);
 
@@ -25,18 +27,18 @@ const ProductCard = () => {
 
   const { title, images, date, work_performed, description, address } = product;
   const productInfoListText = [date, work_performed, address];
-  console.log(loaded);
 
   return (
     <div className={styles.productCard}>
-      <div>
+      {/* <div>
         <img
           src={images[0]}
           alt=""
           className={`${styles.image} ${loaded ? styles.loaded : ''}`}
           onLoad={() => setLoaded(true)}
         />
-      </div>
+      </div> */}
+      <ProductCardGalery imagesData={images} title={title} />
       <div className={styles.infoBox}>
         <h1 className={styles.title}>{title}</h1>
         <div className={styles.infoBox}>

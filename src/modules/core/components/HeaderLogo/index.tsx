@@ -9,9 +9,6 @@ const HeaderLogo = () => {
 
   const ishome = location.pathname === '/' || location.pathname === '/en';
 
-  console.log(ishome);
-  console.log(location.pathname === '/' || '/en');
-
   return (
     <>
       {ishome ? (

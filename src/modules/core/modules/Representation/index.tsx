@@ -21,7 +21,10 @@ const Representation = () => {
             <div>
               <p>{t('representation.text2')}</p>
               <p>{t('representation.text3')}</p>
-              <ButtonLink title={t('representation.moreAbout')} link="#" />
+              <ButtonLink
+                title={t('representation.moreAbout')}
+                link="/about-us"
+              />
             </div>
           </div>
         </div>

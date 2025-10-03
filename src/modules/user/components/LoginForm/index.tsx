@@ -11,13 +11,11 @@ const LoginForm = () => {
 
   const [loginUser, { isLoading, error }] = useLoginMutation();
 
-  const path = import.meta.env.VITE_ROUTE_PATH;
-
   useEffect(() => {
     const token =
       localStorage.getItem('token') || sessionStorage.getItem('token');
     if (token) {
-      navigate(`/${path}/dashboard`, { replace: true });
+      navigate('/dashboard', { replace: true });
     }
   }, [navigate]);
 
@@ -39,7 +37,7 @@ const LoginForm = () => {
           sessionStorage.setItem('token', data.token);
         }
         // navigate('/dashboard');
-        navigate(`/${path}/dashboard`, { replace: true });
+        navigate('/dashboard', { replace: true });
       }
     } catch (err) {
       console.error('Login failed', err);
