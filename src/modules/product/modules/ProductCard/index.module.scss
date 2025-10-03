@@ -24,6 +24,7 @@
   margin-bottom: 15px;
   height: auto;
   object-fit: contain;
+  aspect-ratio: 16 / 16;
 
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -33,7 +34,7 @@
   }
 
   @include media(laptop) {
-    width: 45%;
+    // width: 45%;
   }
 }
 
@@ -163,4 +164,11 @@
 
 .disable {
   cursor: no-drop;
+}
+
+.infoBox {
+  & img {
+    filter: invert(27%) sepia(94%) saturate(7493%) hue-rotate(356deg)
+      brightness(101%) contrast(108%);
+  }
 }

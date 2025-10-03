@@ -13,9 +13,15 @@ interface ProductFormProps {
 const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
   const [saveProduct] = useSaveProductMutation();
 
+  const [imageFiles, setImageFiles] = useState<(File | null)[]>([
+    null,
+    null,
+    null,
+    null,
+    null,
+  ]);
   const { t } = useTranslation();
 
-  const [imageFile, setImageFile] = useState<File | null>(null);
   const [formState, setFormState] = useState<any>({});
 
   useEffect(() => {
@@ -44,7 +50,20 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
 
-    if (imageFile) formData.append('image', imageFile);
+    // imageFiles.forEach((file, index) => {
+    //   if (file) {
+    //     formData.append(`images`, file);
+    //   }
+    // });
+    imageFiles.forEach((file) => {
+      if (file) {
+        formData.append('images[]', file); // 👈 масив
+      }
+    });
+
+    const selectedFiles = imageFiles.filter(
+      (file): file is File => file !== null
+    );
 
     const title = formData.get('title') as string | null;
     if (!product) {
@@ -53,11 +72,12 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
       formData.append('slug', product.slug);
     }
 
-    formData.append('language', 'nl'); // no English
+    formData.append('language', 'nl');
 
-    // for (let [key, value] of formData.entries()) {
-    //   console.log(key, value);
-    // }
+    for (let [key, value] of formData.entries()) {
+      console.log(key, value);
+    }
+    console.log(imageFiles.length);
 
     try {
       if (product && product.id) {
@@ -65,8 +85,8 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
 
         alert(`Product ${product ? 'updated' : 'created'} with ID: ${data.id}`);
       } else {
-        if (!imageFile) {
-          alert('Please select an image');
+        if (!product && selectedFiles.length === 0) {
+          alert('Please select at least one image');
           return;
         }
         const data = await saveProduct({ formData }).unwrap();
@@ -75,8 +95,16 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
       onClose();
     } catch (err: any) {
       console.error(err);
-      alert(`${err.message}` || 'Operation failed');
+      alert('Operation failed');
     }
+  };
+
+  const handleImageChange = (index: number, file: File | null) => {
+    setImageFiles((prev) => {
+      const newFiles = [...prev];
+      newFiles[index] = file;
+      return newFiles;
+    });
   };
 
   return (
@@ -109,13 +137,23 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
             <option value="nl">{t('dutchLang')}</option>
             <option value="en">{t('englishLang')}</option>
           </select> */}
-          <input
+          {/* <input
             type="file"
             accept="image/*"
             onChange={(e) =>
               setImageFile(e.target.files ? e.target.files[0] : null)
             }
-          />
+          /> */}
+          {[0, 1, 2, 3, 4].map((i) => (
+            <input
+              key={i}
+              type="file"
+              accept="image/*"
+              onChange={(e) =>
+                handleImageChange(i, e.target.files ? e.target.files[0] : null)
+              }
+            />
+          ))}
           <textarea
             name="description"
             placeholder={t('products.description')}

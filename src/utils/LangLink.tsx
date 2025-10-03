@@ -9,8 +9,15 @@ const LangLink: FC<PropsWithChildren<LinkProps>> = ({
   const location = useLocation();
   const langPrefix = location.pathname.startsWith('/en') ? '/en' : '';
 
-  const path =
-    typeof to === 'string' ? `${langPrefix}${to}`.replace('//', '/') : to;
+  let path: string | LinkProps['to'];
+
+  if (to === '/') {
+    path = '/en';
+  } else if (typeof to === 'string') {
+    path = `${langPrefix}${to}`.replace(/\/+$/, '').replace('//', '/');
+  } else {
+    path = to;
+  }
 
   return (
     <Link to={path} {...props}>

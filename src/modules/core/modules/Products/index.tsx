@@ -17,7 +17,11 @@ const Products = () => {
         <div>
           {Array.isArray(data) &&
             data.map((product) => (
-              <ProductCardSmall key={product.id} {...product} />
+              <ProductCardSmall
+                key={product.id}
+                {...product}
+                image={product.images[0]}
+              />
             ))}
         </div>
       </div>

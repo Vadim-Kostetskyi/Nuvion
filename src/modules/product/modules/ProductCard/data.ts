@@ -4,6 +4,6 @@ import locationImg from 'assets/icons/location.png';
 
 export const productInfoList = [
   { image: calendarImg },
-  { image: locationImg },
   { image: wrenchImg },
+  { image: locationImg },
 ];

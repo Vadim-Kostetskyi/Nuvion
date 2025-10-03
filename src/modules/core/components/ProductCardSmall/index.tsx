@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import LangLink from 'utils/LangLink';
 import styles from './index.module.scss';
 
 interface ProductCardSmallProps {
@@ -20,10 +21,11 @@ const ProductCardSmall: FC<ProductCardSmallProps> = ({
   date,
   description,
   latest,
+  slug,
 }) => {
   return (
-    <a //TODO add link
-      href=""
+    <LangLink
+      to={`/project/${slug}`}
       className={latest ? styles.productCardLatest : styles.productCardSmall}
     >
       <div>
@@ -34,7 +36,7 @@ const ProductCardSmall: FC<ProductCardSmallProps> = ({
         <p>{date}</p>
         <p>{description}</p>
       </div>
-    </a>
+    </LangLink>
   );
 };
 

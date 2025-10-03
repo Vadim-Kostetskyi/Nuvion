@@ -84,7 +84,7 @@ const AboutUs = () => {
           </a> */}
           <ButtonLink
             title={t('aboutUs.viewProjects')}
-            link=""
+            link="/portfolio"
             className={styles.portfolioBtn}
           />
         </motion.div>
@@ -130,12 +130,9 @@ const AboutUs = () => {
             <h2>{t('aboutUs.ready...')}</h2>
             <p>{t('aboutUs.pleaseContactUs')}</p>
           </div>
-          {/* <a href="/contact" className={styles.ctaBtn}>
-            Kontakt oss
-          </a> */}
           <ButtonLink
             title={t('feedBack.contactUs')}
-            link=""
+            link="/#feedBack"
             className={styles.ctaBtn}
           />
         </div>

@@ -67,11 +67,13 @@ const ProjectsTable: React.FC = () => {
                 <td>{item.title}</td>
                 <td>{item.date}</td>
                 <td>
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className={styles.image}
-                  />
+                  {item.images.map((image) => (
+                    <img
+                      src={image}
+                      alt={item.title}
+                      className={styles.image}
+                    />
+                  ))}
                 </td>
                 <td>{item.work_performed}</td>
                 <td>{item.address}</td>

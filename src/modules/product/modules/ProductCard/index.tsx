@@ -23,20 +23,23 @@ const ProductCard = () => {
   if (isLoading) return <div>...</div>;
   if (isError || !product) return <div>Data loading error</div>;
 
-  const { title, image, date, work_performed, description, address } = product;
+  const { title, images, date, work_performed, description, address } = product;
   const productInfoListText = [date, work_performed, address];
+  console.log(loaded);
 
   return (
     <div className={styles.productCard}>
-      <img
-        src={image}
-        alt=""
-        className={`${styles.image} ${loaded ? styles.loaded : ''}`}
-        onLoad={() => setLoaded(true)}
-      />
+      <div>
+        <img
+          src={images[0]}
+          alt=""
+          className={`${styles.image} ${loaded ? styles.loaded : ''}`}
+          onLoad={() => setLoaded(true)}
+        />
+      </div>
       <div className={styles.infoBox}>
         <h1 className={styles.title}>{title}</h1>
-        <div>
+        <div className={styles.infoBox}>
           {productInfoList.map(({ image }, index) => (
             <ProductInfo
               image={image}

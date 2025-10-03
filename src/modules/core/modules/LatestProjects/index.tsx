@@ -15,11 +15,16 @@ const LatestProjects = () => {
         <div>
           <div className={styles.products}>
             {data?.map((props, index) => (
-              <ProductCardSmall {...props} latest={true} key={index} />
+              <ProductCardSmall
+                {...props}
+                image={props.images[0]}
+                latest={true}
+                key={index}
+              />
             ))}
           </div>
         </div>
-        <ButtonLink title={t('projects.allProjects')} link="#" />
+        <ButtonLink title={t('projects.allProjects')} link="/portfolio" />
       </div>
     </section>
   );

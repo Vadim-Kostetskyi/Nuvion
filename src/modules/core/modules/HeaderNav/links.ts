@@ -1,4 +1,4 @@
 export const links = [
-  { title: 'portfolio', link: '' },
-  { title: 'aboutUs', link: '' },
+  { title: 'portfolio', link: '/portfolio' },
+  { title: 'aboutUs', link: '/about-us' },
 ];

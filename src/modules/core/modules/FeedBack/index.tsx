@@ -62,7 +62,7 @@ const FeedBack = () => {
   };
 
   return (
-    <section className={styles.feedBack}>
+    <section className={styles.feedBack} id="feedBack">
       <h2>{titleProps.title}</h2>
       <div>
         {width <= 660 ? <Map /> : null}
