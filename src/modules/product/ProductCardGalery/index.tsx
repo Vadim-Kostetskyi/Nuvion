@@ -13,6 +13,7 @@ const ProductCardGalery: FC<ProductDetailsGalleryProps> = ({
   title,
 }) => {
   const [images, setImages] = useState<string[]>();
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     setImages(imagesData);
@@ -62,6 +63,14 @@ const ProductCardGalery: FC<ProductDetailsGalleryProps> = ({
     setImages(newArray);
   }, [images]);
 
+  const handleImageClick = () => {
+    if (images && images[0]) {
+      setIsOpen(true);
+    }
+  };
+
+  const handleClose = () => setIsOpen(false);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.placeholder}></div>
@@ -75,7 +84,18 @@ const ProductCardGalery: FC<ProductDetailsGalleryProps> = ({
           className={styles.largeImage}
           src={images && images[0]}
           alt={title}
+          onClick={handleImageClick}
         />
+        {isOpen && (
+          <div className={styles.modal} onClick={handleClose}>
+            <img
+              src={images && images[0]}
+              alt={title}
+              className={styles.modalImage}
+            />
+          </div>
+        )}
+
         {images && images?.length < 2 ? null : (
           <div className={styles.arrowsWrapper}>
             <button className={styles.itemArrow} onClick={onPrevImage}>
