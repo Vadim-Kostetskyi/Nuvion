@@ -3,16 +3,16 @@
 .productCard {
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
   gap: 30px;
   width: 100%;
   min-height: 70vh;
   margin-bottom: 100px;
   padding: 30px 0;
 
-  // @include media(laptop) {
-  //   display: flex;
-  //   align-items: flex-start;
-  // }
+  @include media(laptopMedium) {
+    flex-direction: row;
+  }
 
   & h1 {
     font-size: 32px;
@@ -33,10 +33,6 @@
   &.loaded {
     opacity: 1;
   }
-
-  @include media(laptop) {
-    // width: 45%;
-  }
 }
 
 .infoBox {
@@ -48,11 +44,6 @@
   & svg {
     width: 20px;
   }
-
-  // @include media(laptop) {
-  //   width: 55%;
-  //   padding-left: 30px;
-  // }
 }
 
 .title {
@@ -77,7 +68,6 @@
 .inStock {
   display: flex;
   align-items: center;
-  // color: $limeGreen;
 
   &:before {
     content: '';
@@ -87,7 +77,6 @@
     height: 6px;
     margin-right: 6px;
     border-radius: 50%;
-    // background-color: $limeGreen;
   }
   margin-bottom: 15px;
 }
@@ -95,7 +84,6 @@
 .outStock {
   display: flex;
   align-items: center;
-  // color: $customRed;
 
   &:before {
     content: '';
@@ -105,7 +93,6 @@
     height: 6px;
     margin-right: 6px;
     border-radius: 50%;
-    // background-color: $customRed;
   }
 
   margin-bottom: 15px;
@@ -122,8 +109,6 @@
     padding: 10px;
     text-align: center;
     border: none;
-    // border-bottom: 1px solid $coralPink;
-    // background-color: $softBlush;
 
     -moz-appearance: textfield;
 
@@ -139,7 +124,6 @@
     align-items: center;
     justify-content: center;
     padding: 5px;
-    // background-color: $softBlush;
   }
   margin-bottom: 40px;
 }

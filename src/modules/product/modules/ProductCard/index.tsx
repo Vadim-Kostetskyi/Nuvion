@@ -30,14 +30,6 @@ const ProductCard = () => {
 
   return (
     <div className={styles.productCard}>
-      {/* <div>
-        <img
-          src={images[0]}
-          alt=""
-          className={`${styles.image} ${loaded ? styles.loaded : ''}`}
-          onLoad={() => setLoaded(true)}
-        />
-      </div> */}
       <ProductCardGalery imagesData={images} title={title} />
       <div className={styles.infoBox}>
         <h1 className={styles.title}>{title}</h1>

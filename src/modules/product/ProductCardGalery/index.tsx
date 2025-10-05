@@ -1,8 +1,7 @@
 import { FC, useCallback, useEffect, useState } from 'react';
-// import ArrowSwiperCard from 'assets/svgs/ArrowSwiperCard';
-// import PicturePanel from 'modules/product/components/ProductDetailsGalleryPanel';
-import styles from './index.module.scss';
 import PicturePanel from '../componenst/PicturePanel';
+import ArrowSwiperCard from 'assets/svg/ArrowSwiperCard';
+import styles from './index.module.scss';
 
 export interface ProductDetailsGalleryProps {
   imagesData: string[];
@@ -65,6 +64,7 @@ const ProductCardGalery: FC<ProductDetailsGalleryProps> = ({
 
   return (
     <div className={styles.wrapper}>
+      <div className={styles.placeholder}></div>
       <PicturePanel
         images={images?.slice(1)}
         choosePicture={moveImageToStart}
@@ -76,16 +76,18 @@ const ProductCardGalery: FC<ProductDetailsGalleryProps> = ({
           src={images && images[0]}
           alt={title}
         />
-        <div className={styles.arrowsWrapper}>
-          <button className={styles.itemArrow} onClick={onPrevImage}>
-            {/* <ArrowSwiperCard
-              className={`${styles.arrow} ${styles.arrowPrev}`}
-            /> */}
-          </button>
-          <button className={styles.itemArrow} onClick={onNextImage}>
-            {/* <ArrowSwiperCard className={styles.arrow} /> */}
-          </button>
-        </div>
+        {images && images?.length < 2 ? null : (
+          <div className={styles.arrowsWrapper}>
+            <button className={styles.itemArrow} onClick={onPrevImage}>
+              <ArrowSwiperCard
+                className={`${styles.arrow} ${styles.arrowPrev}`}
+              />
+            </button>
+            <button className={styles.itemArrow} onClick={onNextImage}>
+              <ArrowSwiperCard className={styles.arrow} />
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

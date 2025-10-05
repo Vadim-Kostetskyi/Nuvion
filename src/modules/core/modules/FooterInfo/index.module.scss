@@ -2,13 +2,23 @@
 
 .footerInfo {
   border-top: 1px solid $lightGray;
+
   & > div {
     display: flex;
     justify-content: space-around;
-
+    padding-left: 50px;
     & h3 {
       font-size: 22px;
       font-weight: 600;
+    }
+
+    @include media(tabletMedium2) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include media(tabletMedium2) {
+      padding-left: 50px;
     }
   }
 
@@ -25,6 +35,9 @@
         font-size: 18px;
         margin-top: 5px;
       }
+    }
+    @include media(tabletMedium2) {
+      padding-left: 10%;
     }
   }
 

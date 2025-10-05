@@ -1,7 +1,8 @@
 // $preMobile: 400px;
 $mobile: 560px;
 // $tabletMin: 481px;
-$tabletMedium: 660px;
+$tabletMediumSmall: 660px;
+$tabletMedium: 680px;
 // $tabletLargeMin: 641px;
 $tablet: 960px;
 $laptopMin: 961px;
@@ -21,6 +22,12 @@ $max-content-width: 1230px;
   }
 
   @if $breakpoint ==tabletMedium {
+    @media only screen and (max-width: $tabletMediumSmall) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==tabletMedium2 {
     @media only screen and (max-width: $tabletMedium) {
       @content;
     }
