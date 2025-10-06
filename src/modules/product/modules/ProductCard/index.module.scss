@@ -35,17 +35,6 @@
   }
 }
 
-.infoBox {
-  & > :not(:last-child) {
-    margin-bottom: 25px;
-  }
-
-  & img,
-  & svg {
-    width: 20px;
-  }
-}
-
 .title {
   font-size: 34px;
   font-weight: 900;
@@ -152,7 +141,13 @@
 }
 
 .infoBox {
-  & img {
+  & > :not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  & img,
+  & svg {
+    width: 20px;
     filter: invert(27%) sepia(94%) saturate(7493%) hue-rotate(356deg)
       brightness(101%) contrast(108%);
   }

@@ -7,10 +7,21 @@ interface ProductInfoProps {
 }
 
 const ProductInfo: FC<ProductInfoProps> = ({ image, text }) => {
+  const items = text
+    .split(/(?=•)/)
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+  console.log(items);
+
   return (
     <div className={styles.info}>
       <img src={image} alt="" />
-      <span>{text}</span>
+      <div className={styles.list}>
+        {items.map((item, index) => (
+          <div key={index}>{item}</div>
+        ))}
+      </div>
     </div>
   );
 };
