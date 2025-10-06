@@ -62,15 +62,15 @@
 .productCardSmall {
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: $whiteColor;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px $shadowSubtle;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px $textSecondary;
   }
 
   img {
@@ -87,12 +87,12 @@
   h3 {
     font-size: 1.2rem;
     margin-bottom: 8px;
-    color: #222;
+    color: $gray222;
   }
 
   p {
     margin: 4px 0;
     font-size: 0.95rem;
-    color: #555;
+    color: $gray555;
   }
 }

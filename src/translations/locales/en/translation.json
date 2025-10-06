@@ -94,6 +94,10 @@
     "failed": "Incorrect login or password"
   },
 
+  "portfolio": {
+    "portfolioOf...": "Portfolio of our projects"
+  },
+
   "aboutUs": {
     "about": "About",
     "aboutNuvion": "Our dedicated team has been working on home renovations since 2010. In 2025, we founded Nuvion B.V., carrying over our people, methods, and quality unchanged. We provide complete renovations, extensions, and energy upgrades without hassle.",

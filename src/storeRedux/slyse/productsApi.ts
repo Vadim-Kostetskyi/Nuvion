@@ -19,7 +19,6 @@ export const productsApi = createApi({
       transformResponse: (response: Product[]) =>
         response.map((item) => ({
           ...item,
-          // image: item.image ? `${BASE_URL_IMAGE}${item.image}` : item.image,
           images: item.images.map((img) => `${BASE_URL_IMAGE}${img}`),
         })),
       providesTags: ['Product'],
@@ -30,7 +29,6 @@ export const productsApi = createApi({
       transformResponse: (response: Product[]) =>
         response.map((item) => ({
           ...item,
-          // image: item.image ? `${BASE_URL_IMAGE}${item.image}` : null,
           images: item.images
             ? item.images.map((img) => `${BASE_URL_IMAGE}${img}`)
             : [],
@@ -42,7 +40,6 @@ export const productsApi = createApi({
       query: (slug) => `archive/products/${slug}`,
       transformResponse: (item: Product) => ({
         ...item,
-        // image: item.image ? `${BASE_URL_IMAGE}${item.image}` : null,
         images: item.images
           ? item.images.map((img) => `${BASE_URL_IMAGE}${img}`)
           : [],

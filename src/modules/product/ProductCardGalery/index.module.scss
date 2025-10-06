@@ -33,11 +33,11 @@
   width: 100%;
   aspect-ratio: 1 / 1;
   background-color: $lightGray;
-  border: 1px dashed rgba(0, 0, 0, 0.3);
+  border: 1px dashed $black30;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgba(0, 0, 0, 0.6);
+  color: $black60;
   font-size: 14px;
 }
 
@@ -86,7 +86,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: $black80;
   display: flex;
   justify-content: center;
   align-items: center;

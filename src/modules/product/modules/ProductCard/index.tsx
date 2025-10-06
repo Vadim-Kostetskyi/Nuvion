@@ -1,6 +1,4 @@
-// import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-// import { useTranslation } from 'react-i18next';
 import { useGetProductBySlugQuery } from 'storeRedux/slyse/productsApi';
 // import { parseDescription } from 'utils/text';
 import styles from './index.module.scss';
@@ -16,11 +14,6 @@ const ProductCard = () => {
     isLoading,
     isError,
   } = useGetProductBySlugQuery(productSlug || '');
-  console.log(product);
-
-  // const [loaded, setLoaded] = useState(false);
-
-  // const { t } = useTranslation();
 
   if (isLoading) return <div>...</div>;
   if (isError || !product) return <div>Data loading error</div>;

@@ -36,7 +36,6 @@ const LoginForm = () => {
         } else {
           sessionStorage.setItem('token', data.token);
         }
-        // navigate('/dashboard');
         navigate('/dashboard', { replace: true });
       }
     } catch (err) {

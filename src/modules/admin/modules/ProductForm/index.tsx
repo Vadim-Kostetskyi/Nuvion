@@ -50,14 +50,9 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
 
-    // imageFiles.forEach((file, index) => {
-    //   if (file) {
-    //     formData.append(`images`, file);
-    //   }
-    // });
     imageFiles.forEach((file) => {
       if (file) {
-        formData.append('images[]', file); // 👈 масив
+        formData.append('images[]', file);
       }
     });
 

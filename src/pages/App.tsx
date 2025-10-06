@@ -9,8 +9,6 @@ import AboutUsPage from './AboutUsPage';
 import { ScrollToHashElement } from 'utils/ScrollTo';
 import 'styles/index.scss';
 
-// const path = import.meta.env.VITE_ROUTE_PATH;
-
 const App = () => (
   <>
     <ScrollToHashElement />
