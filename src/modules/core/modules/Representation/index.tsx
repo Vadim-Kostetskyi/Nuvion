@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import photo from 'assets/builder.jpeg';
+import photo from 'assets/IMG_6151.jpeg';
 import styles from './index.module.scss';
 import ButtonLink from 'components/ButtonLink';
 
