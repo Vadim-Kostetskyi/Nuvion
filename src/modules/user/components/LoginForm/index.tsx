@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import styles from './index.module.scss';
 import { useLoginMutation } from 'storeRedux/slyse/login';
+import styles from './index.module.scss';
 
 const LoginForm = () => {
   const { t } = useTranslation();

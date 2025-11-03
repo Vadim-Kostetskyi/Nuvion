@@ -7,9 +7,9 @@ import InputFeedback from 'modules/core/components/InputFeedback';
 import { useFormProps } from './data';
 import 'react-toastify/dist/ReactToastify.css';
 import { nameProps } from 'utils/constants';
-import styles from './index.module.scss';
 import Map from '../Map';
 import { useWindowWidth } from 'utils/windowWidth';
+import styles from './index.module.scss';
 
 export interface Form {
   name: string;

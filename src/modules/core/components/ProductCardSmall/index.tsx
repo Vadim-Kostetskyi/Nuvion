@@ -22,22 +22,20 @@ const ProductCardSmall: FC<ProductCardSmallProps> = ({
   description,
   latest,
   slug,
-}) => {
-  return (
-    <LangLink
-      to={`/project/${slug}`}
-      className={latest ? styles.productCardLatest : styles.productCardSmall}
-    >
-      <div>
-        <img src={image} alt="" />
-      </div>
-      <div>
-        <h3>{title}</h3>
-        <p>{date}</p>
-        <p>{description}</p>
-      </div>
-    </LangLink>
-  );
-};
+}) => (
+  <LangLink
+    to={`/project/${slug}`}
+    className={latest ? styles.productCardLatest : styles.productCardSmall}
+  >
+    <div>
+      <img src={image} alt="" />
+    </div>
+    <div>
+      <h3>{title}</h3>
+      <p>{date}</p>
+      <p>{description}</p>
+    </div>
+  </LangLink>
+);
 
 export default ProductCardSmall;

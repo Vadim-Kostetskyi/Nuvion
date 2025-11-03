@@ -79,9 +79,6 @@ const AboutUs = () => {
           <h2>{t('aboutUs.portfolioAndRef')}</h2>
           <p>{t('aboutUs.portfolioAndRef1')}</p>
           <small>{t('aboutUs.portfolioAndRef2')}</small>
-          {/* <a href="/projects" className={styles.portfolioBtn}>
-            Bekijk projecten
-          </a> */}
           <ButtonLink
             title={t('aboutUs.viewProjects')}
             link="/portfolio"

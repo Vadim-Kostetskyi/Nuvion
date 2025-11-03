@@ -14,7 +14,7 @@ const PrivateRoute = ({ children }: { children: JSX.Element }) => {
     if (token) refetch();
   }, [token, refetch]);
 
-  if (isLoading) return <div>Завантаження...</div>;
+  if (isLoading) return <div>Download...</div>;
   if (isError || !data?.success) return <Navigate to={'/login'} />;
 
   return children;

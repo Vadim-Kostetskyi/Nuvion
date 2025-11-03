@@ -4,12 +4,7 @@ import styles from './index.module.scss';
 const Copyright = () => {
   const { t } = useTranslation();
 
-  return (
-    <div className={styles.copyright}>
-      {t('copyright')}
-      {/* {t('Privacy')} */}
-    </div>
-  );
+  return <div className={styles.copyright}>{t('copyright')}</div>;
 };
 
 export default Copyright;

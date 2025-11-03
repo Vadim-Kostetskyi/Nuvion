@@ -8,20 +8,18 @@ interface HeaderModalProps {
   onClose: () => void;
 }
 
-const HeaderModal: FC<HeaderModalProps> = ({ onClose }) => {
-  return (
-    <div className={styles.headerModal}>
-      <div className={styles.top}>
-        <HeaderLogo />
-        <button className={styles.closeBtn} onClick={onClose}>
-          <Cross />
-        </button>
-      </div>
-      <nav>
-        <HeaderNav isMobile={true} />
-      </nav>
+const HeaderModal: FC<HeaderModalProps> = ({ onClose }) => (
+  <div className={styles.headerModal}>
+    <div className={styles.top}>
+      <HeaderLogo />
+      <button className={styles.closeBtn} onClick={onClose}>
+        <Cross />
+      </button>
     </div>
-  );
-};
+    <nav>
+      <HeaderNav isMobile={true} />
+    </nav>
+  </div>
+);
 
 export default HeaderModal;

@@ -6,7 +6,7 @@
   justify-content: center;
   height: 500px;
   width: 100vw;
-  background-image: url('assets/banner5.png');
+  background-image: url('assets/banner.png');
   background-repeat: no-repeat;
   background-position: center;
   background-color: $pageBackgroundBlack;
@@ -29,7 +29,7 @@
   }
 
   @include media(tablet) {
-    background-size: cover; /* заповнив блок */
+    background-size: cover;
   }
 
   @include media(tablet) {

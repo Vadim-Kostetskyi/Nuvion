@@ -8,12 +8,10 @@ interface ButtonLinkProps {
   className?: string;
 }
 
-const ButtonLink: FC<ButtonLinkProps> = ({ title, link, className }) => {
-  return (
-    <LangLink to={link} className={`${styles.link} ${className || ''}`}>
-      {title}
-    </LangLink>
-  );
-};
+const ButtonLink: FC<ButtonLinkProps> = ({ title, link, className }) => (
+  <LangLink to={link} className={`${styles.link} ${className || ''}`}>
+    {title}
+  </LangLink>
+);
 
 export default ButtonLink;

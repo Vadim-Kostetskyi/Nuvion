@@ -3,7 +3,6 @@ export interface Product {
   title: string;
   slug: string;
   date: string;
-  // image: string;
   images: string[];
   work_performed?: string;
   address?: string;

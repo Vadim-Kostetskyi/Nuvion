@@ -6,17 +6,15 @@ import Prescription from 'modules/core/modules/Prescription';
 import ProposedWorks from 'modules/core/modules/ProposedWorks';
 import Representation from 'modules/core/modules/Representation';
 
-const HomePage = () => {
-  return (
-    <MainLayout>
-      <Banner />
-      <ProposedWorks />
-      <Representation />
-      <Prescription />
-      <LatestProjects />
-      <FeedBack />
-    </MainLayout>
-  );
-};
+const HomePage = () => (
+  <MainLayout>
+    <Banner />
+    <ProposedWorks />
+    <Representation />
+    <Prescription />
+    <LatestProjects />
+    <FeedBack />
+  </MainLayout>
+);
 
 export default HomePage;
