@@ -1,8 +1,8 @@
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { HardHat } from 'lucide-react';
 import ButtonLink from 'components/ButtonLink';
-import { sections } from './data';
+import { aboutNuvion, sections } from './data';
 import styles from './index.module.scss';
 
 // const team = [
@@ -38,7 +38,30 @@ const AboutUs = () => {
             <h1 className={styles.title}>{`${t(
               'aboutUs.about'
             )} Nuvion B.V.`}</h1>
-            <p className={styles.text}>{t('aboutUs.aboutNuvion')}</p>
+            {/* <p className={styles.textMargin}>{t('aboutUs.aboutNuvion1')}</p> */}
+            <p className={styles.textMargin}>
+              <Trans i18nKey="aboutUs.aboutNuvion1" />
+            </p>
+            {/* <p className={styles.textMargin}>{t('aboutUs.aboutNuvion2')}</p>
+            <p className={styles.text}>{t('aboutUs.aboutNuvion3')}</p>
+            <p className={styles.textMargin}>{t('aboutUs.aboutNuvion4')}</p>
+            <p className={styles.text}>{t('aboutUs.aboutNuvion5')}</p>
+            <p className={styles.text}>{t('aboutUs.aboutNuvion6')}</p>
+            <p className={styles.text}>{t('aboutUs.aboutNuvion7')}</p>
+            <p className={styles.text}>{t('aboutUs.aboutNuvion8')}</p> */}
+            {/* <p className={styles.text}>
+              <Trans i18nKey="aboutUs.aboutNuvion8" />
+            </p> */}
+            {aboutNuvion.map(({ title, items }) => (
+              <>
+                <h2 className={styles.titleS}>{t(`aboutUs.${title}`)}</h2>
+                {items.map((item) => (
+                  <p className={styles.text}>
+                    <Trans i18nKey={`aboutUs.${item}`} />
+                  </p>
+                ))}
+              </>
+            ))}
           </motion.div>
         </div>
       </section>

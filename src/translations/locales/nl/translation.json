@@ -19,13 +19,13 @@
   },
 
   "feedBack": {
-    "contactUs": "Kontakt oss",
+    "contactUs": "Neem contact op",
     "name": "Voornaam en achternaam",
     "lastName": "Etternavn",
-    "phoneNumber": "Telefonnummer",
-    "email": "E-postadresse",
-    "message": "Melding",
-    "send": "Send"
+    "phoneNumber": "Telefoonnummer",
+    "email": "E-mailadres",
+    "message": "Bericht",
+    "send": "Verzenden"
   },
 
   "toastify": {
@@ -40,14 +40,14 @@
     "renovation": "Renovatie",
     "renovationDesc": "Gebouwrenovatie of verbouwing? Lees hoe wij dat doen en voor wie wij reeds hebben gewerkt.",
     "maintenance": "Onderhoud",
-    "maintenanceDesc": "Wij voeren onderhoud uit voor verschillende instanties, waaronder b.v. ook overheidsinstellingen.",
+    "maintenanceDesc": "Wij voeren onderhoud uit voor diverse organisaties, waaronder overheidsinstellingen.",
     "newConstruction": "Nieuwbouw",
     "newConstructionDesc": "Iets nieuws laten bouwen? We denken graag met u mee over nieuw- of verbouw zodat u weer jaren vooruit kunt."
   },
 
   "representation": {
-    "title": "Laten we kennis maken!",
-    "text1": "Het bedrijf Nuvion is al 9 jaar uw betrouwbare partner in Nederland en is gespecialiseerd in uitgebreid onderhoud, restauratie en renovatie van projecten van elke omvang – van gezellige particuliere woningen en bijgebouwen tot moderne commerciële ruimtes. Onze prioriteiten zijn altijd oncompromisende kwaliteit, diepgaande professionele kennis en aandacht voor elk detail – daarom zijn we trots op de vele succesvol afgeronde projecten voor uiteenlopende opdrachtgevers.",
+    "title": "Laten we kennismaken!",
+    "text1": "Het bedrijf Nuvion is al 9 jaar uw betrouwbare partner in Nederland en is gespecialiseerd in uitgebreid onderhoud, restauratie en renovatie van projecten van elke omvang – van gezellige particuliere woningen en bijgebouwen tot moderne commerciële ruimtes. Onze prioriteiten zijn compromisloze kwaliteit, diepgaande vakkennis en aandacht voor elk detail.",
     "text2": "We doen veel meer dan alleen bouwwerkzaamheden uitvoeren: onze medewerkers hebben een oprechte passie voor hun vak en weten oplossingen te vinden waar anderen het opgeven. We steunen elkaar, staan altijd open voor dialoog, dragen nuttige ideeën aan en zijn bereiden om een proactieve partner te zijn in elke fase van de samenwerking. Voor ons zijn duidelijkheid en vertrouwen belangrijk – daarom stellen we realistische plannen op, bieden we volledig transparante offertes en communiceren we altijd eerlijk met alle opdrachtgevers.",
     "text3": "Wilt u meer weten over hoe wij u specifiek kunnen helpen? Klik eenvoudig op de onderstaande knop – wij beantwoorden graag al uw vragen en bieden u de best passende oplossing.",
     "moreAbout": "Meer over Nuvion"
@@ -100,7 +100,40 @@
 
   "aboutUs": {
     "about": "Over",
-    "aboutNuvion": "Ons vaste team werkt sinds 2010 aan woningrenovaties. In 2025 hebben we Nuvion B.V. opgericht en onze mensen, werkwijze en kwaliteit ongewijzigd meegenomen. We leveren complete renovaties, uitbouw en energie-upgrades zonder gedoe.",
+    "aboutNuvion1": "Ons vaste team werkt sinds 2010 aan woningrenovaties. In 2025 hebben we Nuvion B.V. opgericht en dezelfde mensen, werkwijze en kwaliteit behouden. We voeren <strong>complete renovaties</strong> en <strong>uitbouwen</strong> uit zonder gedoe. We plannen strak, communiceren transparant en geven garantie.",
+    "aboutNuvion2": "Specialisaties: dakopbouw en dakkapel, uitbouw, zolder tot woonverdieping, isolatie en HR++-glas, badkamer en toilet, keuken, sleutelklaar.",
+    "aboutNuvion3": "Werkzaamheden: binnenwanden plaatsen, balk/bint plaatsen of vervangen, metalen of houten trappen op maat, timmerwerk, traprenovatie, dakrenovatie of vervanging, dakramen en lichtkoepels, dakterras, elektra nieuw of renovatie, groepenkast vervangen of uitbreiden, verlichting, ventilatie, sanitair en cv, vloerverwarming elektrisch of watergedragen, geluids- en warmte-isolatie, selectieve binnensloop. We werken stofarm en ruimen dagelijks op.",
+    "aboutNuvion4": "Zekerheid: minimaal 3 jaar garantie*. Betaling per mijlpaal met transparante facturen.",
+    "aboutNuvion5": "Prijspakketten: Economy, Standaard, Premium.",
+    "aboutNuvion6": "Portfolio en referenties: veel afgeronde projecten. Reactie op werkdagen meestal binnen 1 uur.",
+    "aboutNuvion7": "*Garanties en voorwaarden staan in de offerte en opdrachtbevestiging.",
+    "aboutNuvion8": "Ons vaste team werkt sinds 2010 aan woningrenovaties. In 2025 hebben we <strong>Nuvion B.V.</strong> opgericht en dezelfde mensen, werkwijze en kwaliteit behouden. We voeren complete <strong>renovaties</strong> en <strong>uitbouwen</strong> uit zonder gedoe. We plannen strak, communiceren transparant en geven garantie.",
+
+    "whatWeDoTitle": "Wat wij doen",
+    "whatWeDo1": "* <strong>Complete renovaties</strong> van appartementen en eengezinswoningen: van demontage en ruwbouw tot volledige afwerking.",
+    "whatWeDo2": "* <strong>Badkamers, keukens, toiletten</strong>: demontage, leidingen verleggen, elektra, ventilatie, tegelwerk, kitwerk, montage en afwerking.",
+    "whatWeDo3": "* <strong>Interne verbouwingen en uitbouw</strong>: openingen in <strong>draagmuren</strong> met stalen liggers, nieuwe plattegronden, lichte constructieve werkzaamheden.",
+    "whatWeDo4": "* <strong>Elektra</strong>: volledige vernieuwing van bedrading, extra groepen en <strong>aardlekschakelaars</strong>, upgrade van de <strong>groepenkast</strong>, schakelmateriaal en verlichting.",
+    "whatWeDo5": "* <strong>Water, verwarming en riolering</strong>: leidingen vervangen of verplaatsen, radiatoren plaatsen of vervangen.",
+    "whatWeDo6": "* <strong>Ventilatie</strong>: vervanging van mechanische ventilatieboxen, verbetering van kanalen, montage van roosters en afzuigpunten.",
+    "whatWeDo7": "* <strong>Gevel, dak en buitenwerk</strong>: gevelherstel, voegen en impregneren, dakreparaties, dakisolatie, dakramen, <strong>boeidelen.</strong>",
+    "whatWeDo8": "* <strong>Isolatie en energie-upgrades</strong>: vloer- en dakisolatie, <strong>kierdichting.</strong>",
+    "whatWeDo9": "* <strong>Kozijnen, deuren en timmerwerk</strong>: houten kozijnen, binnendeuren, maatmeubilair, <strong>metal-stud</strong> wanden en plafonds.",
+    "howWeWorkTitle": "Hoe wij werken",
+    "howWeWork1": "1. <strong>Opname op locatie.</strong>",
+    "howWeWork2": "2. <strong>Advies en begroting</strong> met heldere prijs en gefaseerde planning.",
+    "howWeWork3": "3. <strong>Voorbereiding</strong> van materialen.",
+    "howWeWork4": "4. <strong>Uitvoering</strong> met vaste uitvoerder.",
+    "howWeWork5": "5. <strong>Oplevering en garantie</strong> met checklist.",
+    "qualityAndSafetyTitle": "Kwaliteit en veiligheid",
+    "qualityAndSafety1": "Transparant meerwerk uitsluitend na vooraf akkoord.",
+    "pricesAndOptionsTitle": "Prijzen en opties",
+    "pricesAndOptions1": "Vaste aanneemsom per duidelijke scope of op uurbasis met <strong>wekelijkse rapportage</strong>. Materialen via onze leveranciers met korting of door de klant geleverd. Alle bedragen excl. <strong>21% btw</strong>, tenzij anders vermeld.",
+    "forWhomTitle": "Voor wie",
+    "forWhom1": "Particulieren, investeerders en verhuurders, makelaars en property-managers, <strong>VvE’s</strong>.",
+    "areaOfOperationTitle": "Werkgebied",
+    "areaOfOperation1": "Den Haag + ca. <strong>35 km</strong>: Delft, Rijswijk, Voorburg/Leidschendam, Westland, Leiden, Rotterdam.",
+
     "specializations": "Specialisaties",
     "specializations1": "Dakopbouw en dakkapel",
     "specializations2": "Uitbouw",
@@ -117,10 +150,10 @@
     "pricePackages1": "Economy",
     "pricePackages2": "Standaard",
     "pricePackages3": "Premium",
-    "portfolioAndRef": "Portfolio and references",
+    "portfolioAndRef": " Portfolio en referenties",
     "portfolioAndRef1": "Veel afgeronde projecten. Reactie op werkdagen meestal binnen 1 uur.",
     "portfolioAndRef2": "*Garanties en voorwaarden staan in de offerte en opdrachtbevestiging.",
-    "portfolioAndRef3": "Portfolio and references",
+    "portfolioAndRef3": " Portfolio en referenties",
     "viewProjects": "Bekijk projecten",
     "ourTeam": "Ons Team",
     "professionalsWho...": "Vakmensen die elke dag kwaliteit leveren.",
@@ -131,6 +164,6 @@
   "englishLang": "Engels",
   "dutchLang": "Nederlands",
   "address": "Platinaweg 25, 2544 EZ, Den Haag",
-  "copyright": "Copyright Nuvion™  2025 ©",
+  "copyright": "© 2025 Nuvion B.V.",
   "Privacy": "Privacy statement | Algemene Voorwaarden"
 }

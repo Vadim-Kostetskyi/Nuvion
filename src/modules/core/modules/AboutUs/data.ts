@@ -25,3 +25,46 @@ export const sections = [
     Icon: Euro,
   },
 ];
+
+export const aboutNuvion = [
+  {
+    title: 'whatWeDoTitle',
+    items: [
+      'whatWeDo1',
+      'whatWeDo2',
+      'whatWeDo3',
+      'whatWeDo4',
+      'whatWeDo5',
+      'whatWeDo6',
+      'whatWeDo7',
+      'whatWeDo8',
+      'whatWeDo9',
+    ],
+  },
+  {
+    title: 'howWeWorkTitle',
+    items: [
+      'howWeWork1',
+      'howWeWork2',
+      'howWeWork3',
+      'howWeWork4',
+      'howWeWork5',
+    ],
+  },
+  {
+    title: 'qualityAndSafetyTitle',
+    items: ['qualityAndSafety1'],
+  },
+  {
+    title: 'pricesAndOptionsTitle',
+    items: ['pricesAndOptions1'],
+  },
+  {
+    title: 'forWhomTitle',
+    items: ['forWhom1'],
+  },
+  {
+    title: 'areaOfOperationTitle',
+    items: ['areaOfOperation1'],
+  },
+];
