@@ -8,9 +8,9 @@ import PortfolioPage from './PortfolioPage';
 import AboutUsPage from './AboutUsPage';
 import { ScrollToHashElement } from 'utils/ScrollTo';
 import 'styles/index.scss';
-import CookieBanner from 'modules/core/modules/CookieBanner';
-import PrivacyPolicyPage from './PrivacyPolicyPage.tsx';
-import CookiePolicyPage from './CookiePolicyPage/index.tsx';
+// import CookieBanner from 'modules/core/modules/CookieBanner';
+// import PrivacyPolicyPage from './PrivacyPolicyPage.tsx';
+// import CookiePolicyPage from './CookiePolicyPage/index.tsx';
 
 const App = () => (
   <>
