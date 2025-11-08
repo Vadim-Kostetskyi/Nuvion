@@ -44,7 +44,7 @@ const ProjectsTable: React.FC = () => {
   return (
     <div className={styles.tableContainer}>
       <button className={styles.addItemBtn} onClick={() => onOpenModal()}>
-        <img src={pludImage} alt="" />
+        <img src={pludImage} alt="plus" loading="lazy" />
       </button>
       {isModalOpen && (
         <ProductForm onClose={onCloseModal} product={editingProduct} />
@@ -72,6 +72,7 @@ const ProjectsTable: React.FC = () => {
                       src={image}
                       alt={item.title}
                       className={styles.image}
+                      loading="lazy"
                     />
                   ))}
                 </td>
@@ -84,13 +85,13 @@ const ProjectsTable: React.FC = () => {
                       className={styles.editBtn}
                       onClick={() => onOpenModal(item)}
                     >
-                      <img src={editImage} alt="edit" />
+                      <img src={editImage} alt="edit" loading="lazy" />
                     </button>
                     <button
                       className={styles.deleteBtn}
                       onClick={() => handleDeleteProduct(item.id, item.title)}
                     >
-                      <img src={backedImage} alt="delete" />
+                      <img src={backedImage} alt="delete" loading="lazy" />
                     </button>
                   </div>
                 </td>

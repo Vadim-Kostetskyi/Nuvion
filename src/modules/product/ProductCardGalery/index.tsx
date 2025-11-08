@@ -85,6 +85,7 @@ const ProductCardGalery: FC<ProductDetailsGalleryProps> = ({
           src={images && images[0]}
           alt={title}
           onClick={handleImageClick}
+          loading="lazy"
         />
         {isOpen && (
           <div className={styles.modal} onClick={handleClose}>
@@ -92,6 +93,7 @@ const ProductCardGalery: FC<ProductDetailsGalleryProps> = ({
               src={images && images[0]}
               alt={title}
               className={styles.modalImage}
+              loading="lazy"
             />
           </div>
         )}

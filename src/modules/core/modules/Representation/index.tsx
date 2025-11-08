@@ -10,7 +10,11 @@ const Representation = () => {
     <section className={styles.representation}>
       <div>
         <div className={styles.imageWrapper}>
-          <img src={photo} alt="" />
+          <img
+            src={photo}
+            alt="swimming pool with unfinished roof"
+            loading="lazy"
+          />
         </div>
         <div className={styles.textBox}>
           <h2>{t('representation.title')}</h2>

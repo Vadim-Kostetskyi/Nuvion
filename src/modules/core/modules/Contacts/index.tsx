@@ -30,7 +30,7 @@ const Contacts: FC<ContactsProps> = ({ isEmail, isAddress, isPhone }) => {
         <div>
           <h3>{t('footer.ourAddress')}</h3>
           <div>
-            <img src={locationIcon} alt="location" />
+            <img src={locationIcon} alt="location" loading="lazy" />
             <span>{t('address')}</span>
           </div>
         </div>

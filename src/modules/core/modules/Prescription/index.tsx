@@ -11,7 +11,7 @@ const Prescription = () => {
       <div>
         {list1.map(({ label }) => (
           <div>
-            <img src={icon} alt="" />
+            <img src={icon} alt="installation" loading="lazy" />
             <strong>{t(`prescription.${label}`)}</strong>
           </div>
         ))}
@@ -19,7 +19,7 @@ const Prescription = () => {
       <div>
         {list2.map(({ label }) => (
           <div>
-            <img src={icon} alt="" />
+            <img src={icon} alt="installation" loading="lazy" />
             <strong>{t(`prescription.${label}`)}</strong>
           </div>
         ))}

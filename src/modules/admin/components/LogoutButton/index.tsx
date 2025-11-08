@@ -16,7 +16,7 @@ const LogoutButton = () => {
 
   return (
     <button onClick={handleLogout}>
-      <img src={logoutIcon} alt="Logout Button" />
+      <img src={logoutIcon} alt="Logout Button" loading="lazy" />
     </button>
   );
 };

@@ -13,12 +13,12 @@ const HeaderLogo = () => {
     <>
       {ishome ? (
         <div className={styles.logo}>
-          <img src={logo} alt="" />
+          <img src={logo} alt="logo" loading="lazy" />
           <p>{brand}</p>
         </div>
       ) : (
         <LangLink to={'/'} className={styles.logo}>
-          <img src={logo} alt="" />
+          <img src={logo} alt="logo" loading="lazy" />
           <p>{brand}</p>
         </LangLink>
       )}

@@ -19,7 +19,7 @@ const PicturePanel: FC<ProductDetailsGalleryPanelProps> = ({
         className={styles.imageButton}
         onClick={choosePicture(index)}
       >
-        <img className={styles.image} src={img} alt={cardName} />
+        <img className={styles.image} src={img} alt={cardName} loading="lazy" />
       </button>
     ))}
   </div>

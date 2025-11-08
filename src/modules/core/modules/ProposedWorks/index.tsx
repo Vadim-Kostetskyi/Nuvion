@@ -16,7 +16,7 @@ const ProposedWorks = () => {
         }) => (
           // <a className={styles.work} href={link} key={title}>
           <div className={styles.work}>
-            <img src={image} alt="" />
+            <img src={image} alt={title} />
             <h5>{t(`proposedWorks.${title}`)}</h5>
             <p>{t(`proposedWorks.${description}`)}</p>
             {/* <span>{t('proposedWorks.readMore')}</span> */}

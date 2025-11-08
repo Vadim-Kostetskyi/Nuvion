@@ -28,7 +28,7 @@ const ProductCardSmall: FC<ProductCardSmallProps> = ({
     className={latest ? styles.productCardLatest : styles.productCardSmall}
   >
     <div>
-      <img src={image} alt="" />
+      <img src={image} alt={title} loading="lazy" />
     </div>
     <div>
       <h3>{title}</h3>

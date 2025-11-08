@@ -16,7 +16,7 @@ const ProductInfo: FC<ProductInfoProps> = ({ image, text }) => {
 
   return (
     <div className={styles.info}>
-      <img src={image} alt="" />
+      <img src={image} alt={text} loading="lazy" />
       <div className={styles.list}>
         {items.map((item, index) => (
           <div key={index}>{item}</div>
