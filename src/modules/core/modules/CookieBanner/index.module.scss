@@ -1,0 +1,79 @@
+@use 'styles/bootstrap' as *;
+
+.banner {
+  position: fixed; // закріплюємо банер
+  bottom: 1rem; // відступ від низу екрана
+  left: 50%;
+  transform: translateX(-50%); // центр по горизонталі
+  z-index: 100;
+  width: 95%;
+  max-width: 720px;
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #1f2937;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+
+.accept {
+  background-color: #0056b3;
+  color: white;
+  padding: 0.55rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #004494;
+  }
+}
+
+.decline {
+  background-color: transparent;
+  color: #1f2937;
+  padding: 0.55rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: 1px solid #cbd5e0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

@@ -8,6 +8,9 @@ import PortfolioPage from './PortfolioPage';
 import AboutUsPage from './AboutUsPage';
 import { ScrollToHashElement } from 'utils/ScrollTo';
 import 'styles/index.scss';
+import CookieBanner from 'modules/core/modules/CookieBanner';
+import PrivacyPolicyPage from './PrivacyPolicyPage.tsx';
+import CookiePolicyPage from './CookiePolicyPage/index.tsx';
 
 const App = () => (
   <>
@@ -62,7 +65,11 @@ const App = () => (
 
       {/* 404 → редірект */}
       <Route path="*" element={<Navigate to="/" replace />} />
+      {/* <Route path="/privacy-policy" element={<PrivacyPolicyPage />} /> */}
+      {/* <Route path="/cookie-policy" element={<CookiePolicyPage />} /> */}
     </Routes>
+
+    {/* <CookieBanner /> */}
   </>
 );
 

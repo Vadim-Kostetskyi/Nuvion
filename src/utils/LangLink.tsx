@@ -12,7 +12,7 @@ const LangLink: FC<PropsWithChildren<LinkProps>> = ({
   let path: string | LinkProps['to'];
 
   if (to === '/') {
-    path = '/en';
+    path = langPrefix || '/';
   } else if (typeof to === 'string') {
     path = `${langPrefix}${to}`.replace(/\/+$/, '').replace('//', '/');
   } else {
