@@ -69,10 +69,10 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onClose }) => {
 
     formData.append('language', 'nl');
 
-    for (let [key, value] of formData.entries()) {
-      console.log(key, value);
-    }
-    console.log(imageFiles.length);
+    // for (let [key, value] of formData.entries()) {
+    //   console.log(key, value);
+    // }
+    // console.log(imageFiles.length);
 
     try {
       if (product && product.id) {

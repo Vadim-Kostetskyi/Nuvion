@@ -12,7 +12,7 @@ const ProductInfo: FC<ProductInfoProps> = ({ image, text }) => {
     .map((item) => item.trim())
     .filter(Boolean);
 
-  console.log(items);
+  // console.log(items);
 
   return (
     <div className={styles.info}>

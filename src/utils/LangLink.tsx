@@ -20,7 +20,7 @@ const LangLink: FC<PropsWithChildren<LinkProps>> = ({
   }
 
   return (
-    <Link to={path} {...props}>
+    <Link rel="canonical" to={path} {...props}>
       {children}
     </Link>
   );
