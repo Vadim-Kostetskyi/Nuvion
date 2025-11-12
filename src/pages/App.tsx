@@ -7,6 +7,7 @@ import PrivateRoute from 'storeRedux/PrivateRoute';
 import PortfolioPage from './PortfolioPage';
 import AboutUsPage from './AboutUsPage';
 import { ScrollToHashElement } from 'utils/ScrollTo';
+import LangMeta from 'modules/language/LangMeta';
 import 'styles/index.scss';
 // import CookieBanner from 'modules/core/modules/CookieBanner';
 // import PrivacyPolicyPage from './PrivacyPolicyPage.tsx';
@@ -15,6 +16,7 @@ import 'styles/index.scss';
 const App = () => (
   <>
     <ScrollToHashElement />
+    <LangMeta />
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/project/:productSlug" element={<ProductPage />} />
