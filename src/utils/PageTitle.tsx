@@ -9,21 +9,33 @@ const capitalizeWords = (str: string) =>
 
 const PageTitle: React.FC = () => {
   const location = useLocation();
-  const path = location.pathname.replace(/^\/(en|nl)/, '') || '/';
+  const path = location.pathname;
+
+  const lang = path.startsWith('/en') ? 'en' : 'nl';
+  const cleanPath = path.replace(/^\/(en|nl)/, '') || '/';
 
   let title = '';
 
-  if (path.startsWith('/project/')) {
-    const projectSlug = path.replace('/project/', '');
+  if (cleanPath.startsWith('/project/')) {
+    const projectSlug = cleanPath.replace('/project/', '');
     const projectTitle = capitalizeWords(projectSlug);
     title = `${projectTitle} | Nuvion B.V.`;
   } else {
-    const titlesMap: Record<string, string> = {
-      '/': 'Nuvion B.V.',
-      '/portfolio': 'Portfolio | Nuvion B.V.',
-      '/about-us': 'Over ons | Nuvion B.V.',
+    const titlesMap: Record<string, Record<string, string>> = {
+      '/': { nl: 'Nuvion B.V.', en: 'Nuvion B.V.' },
+      '/portfolio': {
+        nl: 'Portfolio | Nuvion B.V.',
+        en: 'Portfolio | Nuvion B.V.',
+      },
+      '/about-us': {
+        nl: 'Over ons | Nuvion B.V.',
+        en: 'About Us | Nuvion B.V.',
+      },
     };
-    title = titlesMap[path] || 'Nuvion B.V.';
+
+    title =
+      titlesMap[cleanPath]?.[lang] ||
+      (lang === 'en' ? 'Nuvion B.V.' : 'Nuvion B.V.');
   }
 
   useEffect(() => {
